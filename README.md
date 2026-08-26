@@ -1,36 +1,48 @@
-# 成都旅伴 v25｜實景照片版
+# 成都旅伴 v26｜實景照片自動下載版
 
-此版延續中國境內版：高德地圖、百度搜尋、本地行程、離線備註與 PWA。
+此版本修正 v25「上傳後沒有實景圖片」的問題。
 
-## 新增：8 張實景旅行照片
+## 上傳後會自動做什麼
 
-網站已改為讀取：
+只要把本資料夾完整上傳到 GitHub repository 的 `main` branch：
 
-- `assets/photos/chunxi.jpg`
-- `assets/photos/panda.jpg`
-- `assets/photos/jiuzhaigou.jpg`
-- `assets/photos/huanglong.jpg`
-- `assets/photos/leshan.jpg`
-- `assets/photos/emei.jpg`
-- `assets/photos/sanxingdui.jpg`
-- `assets/photos/kuanzhai.jpg`
+1. GitHub Actions 會自動啟動 `Fetch travel photos`
+2. 透過 Wikimedia Commons API 找到 8 張照片的實際檔案網址
+3. 下載到 `assets/photos/`
+4. 由 `github-actions[bot]` 自動 commit 回 `main`
+5. GitHub Pages 再次部署後，網站就會改用真正照片
 
-照片尚未下載時會自動顯示原本的本地插畫，不會破圖。
+不需要手動按 `Run workflow`。
 
-## 第一次下載照片
+## 你會看到的照片
 
-上傳全部檔案到 GitHub 後：
+- 春熙路
+- 成都大熊貓繁育研究基地
+- 九寨溝
+- 黃龍
+- 樂山大佛
+- 峨眉山金頂
+- 三星堆博物館
+- 寬窄巷子
 
-1. 進入 repository 的 **Actions**
-2. 點 **Fetch travel photos**
-3. 點 **Run workflow**
-4. 等待 workflow 完成
+## 如果 Action 出現 push 權限錯誤
 
-Action 會自動下載 8 張照片到 `assets/photos/` 並 commit 回 `main`。
-之後 GitHub Pages 使用的是 repo 裡的本地圖片，不需要在中國連 Wikimedia/Flickr。
+到 repository：
 
-圖片授權與攝影者請見 `IMAGE_CREDITS.md`。
+`Settings → Actions → General → Workflow permissions`
 
-## 離線
+選：
 
-出發前在台灣至少完整開啟網站一次；Service Worker 會把同網域圖片在瀏覽時快取。
+`Read and write permissions`
+
+儲存後，再到 Actions 頁面重新執行一次 `Fetch travel photos`。
+
+## 如何確認成功
+
+在 repository 裡打開：
+
+`assets/photos/`
+
+應該會看到 8 個 `.jpg`，不再只有 `.gitkeep`。
+
+完整照片來源與授權見 `IMAGE_CREDITS.md`。
