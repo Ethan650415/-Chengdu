@@ -1,0 +1,93 @@
+name: Fetch 29 Chengdu photos v27
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download 29 travel photos
+        shell: bash
+        run: |
+          set -u
+          mkdir -p assets/photos
+          failed=0
+
+          fetch_commons() {
+            local commons_name="$1"
+            local output_name="$2"
+            echo "==> $commons_name"
+
+            media_url="$(
+              curl -L --silent --show-error --fail --retry 3 --get                 "https://commons.wikimedia.org/w/api.php"                 --data-urlencode "action=query"                 --data-urlencode "format=json"                 --data-urlencode "prop=imageinfo"                 --data-urlencode "iiprop=url"                 --data-urlencode "iiurlwidth=1600"                 --data-urlencode "titles=File:${commons_name}"               | jq -r '.query.pages[]?.imageinfo[0]?.thumburl // .query.pages[]?.imageinfo[0]?.url // empty'
+            )"
+
+            if [[ -z "$media_url" ]]; then
+              echo "::warning::Could not resolve $commons_name"
+              failed=$((failed + 1))
+              return 0
+            fi
+
+            if ! curl -L --fail --retry 3 --retry-delay 2               -A "ChengduTripWebsite/1.0"               "$media_url" -o "assets/photos/$output_name"; then
+              echo "::warning::Failed $commons_name"
+              rm -f "assets/photos/$output_name"
+              failed=$((failed + 1))
+            fi
+          }
+
+          fetch_commons "Chunxiroaddaytime.jpg" "chunxi.jpg"
+          fetch_commons "成都太古里街景4.jpg" "taikoo.jpg"
+          fetch_commons "Jinli Street 35244-Chengdu (49067637603).jpg" "jinli.jpg"
+          fetch_commons "Teahouse in Peoples Park - Chengdu, China - DSC05353.jpg" "peoples_park.jpg"
+          fetch_commons "Wide and Narrow Alleys, Chengdu (20240905).jpg" "kuanzhai.jpg"
+          fetch_commons "成都 川劇變臉 滾燈 (39288703955).jpg" "sichuan_opera.jpg"
+          fetch_commons "36611-Dujiangyan (45357846721).jpg" "dujiangyan_1.jpg"
+          fetch_commons "都江堰 (68) (31167532972).jpg" "dujiangyan_2.jpg"
+          fetch_commons "松潘古城 2024-06-16 01.jpg" "songpan_1.jpg"
+          fetch_commons "Songpan Old Town.jpg" "songpan_2.jpg"
+          fetch_commons "1 huanglong pools aerial 2011.jpg" "huanglong_1.jpg"
+          fetch_commons "Huanglong Sichuan China Multicolored-ponds-02.jpg" "huanglong_2.jpg"
+          fetch_commons "HuanglongWaterfall.jpg" "huanglong_3.jpg"
+          fetch_commons "20250513 Wuhua Hai.jpg" "jiuzhaigou_1.jpg"
+          fetch_commons "Long Lake Jiuzhaigou.jpg" "jiuzhaigou_2.jpg"
+          fetch_commons "20250513 Norilang Pubu.jpg" "jiuzhaigou_3.jpg"
+          fetch_commons "20250514 Leshan Giant Buddha.jpg" "leshan_1.jpg"
+          fetch_commons "36135-Leshan (49068368082).jpg" "leshan_2.jpg"
+          fetch_commons "20250514 Jinding (091144).jpg" "emei_1.jpg"
+          fetch_commons "峨眉山风景区 Mount Emei Scenic Area 04.jpg" "emei_2.jpg"
+          fetch_commons "1 panda trio sichuan china 2011.jpg" "panda_1.jpg"
+          fetch_commons "Chengdu Chengdu Panda Reserve Base Große Pandas 01.jpg" "panda_2.jpg"
+          fetch_commons "Chengdu Research Base of Giant Panda Breeding, 201907, 01.jpg" "panda_entrance.jpg"
+          fetch_commons "A square at Sanxingdui Museum, Guanghan.jpg" "sanxingdui_1.jpg"
+          fetch_commons "Sanxingdui Gold Mask.jpg" "sanxingdui_2.jpg"
+          fetch_commons "First Pavilion of Sanxingdui Museum 20161122.jpg" "sanxingdui_3.jpg"
+          fetch_commons "Chengdu hot pot.jpg" "food_hotpot.jpg"
+          fetch_commons "Chengdu Zhong Dumpling(Zhong Jiaozi).jpg" "food_dumplings.jpg"
+          fetch_commons "金牌麻婆豆腐 Chen's Gold Medal Mapo Tofu (1482960943).jpg" "food_mapotofu.jpg"
+
+          echo "Downloaded:"
+          find assets/photos -maxdepth 1 -type f ! -name '.gitkeep' -printf '%f\n' | sort
+          echo "Failed count: $failed"
+
+      - name: Commit photos
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/photos
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Add complete Chengdu photo library"
+            git push origin HEAD:main
+          fi
