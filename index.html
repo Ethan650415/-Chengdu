@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#173d36" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="成都旅伴" />
+    <title>成都旅伴手冊｜2026.09.18–09.27</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <link rel="stylesheet" href="./styles.css?v=22" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="旅行導覽">
+        <div class="brand">
+          <div class="brand-mark">蓉</div>
+          <div>
+            <p class="eyebrow">Internal trip app</p>
+            <h1>成都旅伴手冊</h1>
+          </div>
+        </div>
+
+        <nav class="nav-tabs" aria-label="主要頁面">
+          <button class="nav-tab is-active" data-view="overview">總覽</button>
+          <button class="nav-tab" data-view="itinerary">每日行程</button>
+          <button class="nav-tab" data-view="places">景點資料</button>
+          <button class="nav-tab" data-view="food">四川美食</button>
+          <button class="nav-tab" data-view="notes">備註</button>
+        </nav>
+
+        <section class="trip-meta" aria-label="旅行資訊">
+          <div>
+            <span>日期</span>
+            <strong>2026/9/18 - 9/27</strong>
+          </div>
+          <div>
+            <span>交通</span>
+            <strong>4 人獨立成團｜7 座商務車</strong>
+          </div>
+          <div>
+            <span>目的地</span>
+            <strong>四川・成都／川西</strong>
+          </div>
+          <div>
+            <span>住宿</span>
+            <strong>9 晚｜成都、川主寺、九寨溝、松潘、峨眉</strong>
+          </div>
+        </section>
+      </aside>
+
+      <main>
+        <section class="hero" aria-label="成都旅行首頁">
+          <div class="hero-copy">
+            <p class="eyebrow">September 18 - September 27</p>
+            <p>
+              從成都出發，走進都江堰、黃龍、九寨溝與松潘；
+              回到成都後再前往樂山、峨眉山，最後用熊貓、三星堆、茶館與川劇收尾。
+            </p>
+          </div>
+          <div class="weather-strip" aria-label="旅行主軸">
+            <div>
+              <span>成都</span>
+              <strong>春熙路、太古里、熊貓、三星堆、人民公園</strong>
+            </div>
+            <div>
+              <span>川西</span>
+              <strong>都江堰、黃龍、九寨溝、松潘</strong>
+            </div>
+            <div>
+              <span>樂山峨眉</span>
+              <strong>樂山大佛、峨眉山金頂</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="view is-visible" id="overview">
+          <div class="section-heading">
+            <h3>旅行總覽</h3>
+            <p>第一版依旅行社 10 天 9 晚正式路線整理；飯店、司機與兩組送機細節仍保留待補欄位。</p>
+          </div>
+
+          <div class="overview-grid">
+            <article class="info-card">
+              <span class="card-kicker">10 Days</span>
+              <h4>成都 × 川西 × 樂山峨眉</h4>
+              <p>9/18 抵達成都，9/19–9/22 完成川西段，9/23–9/24 樂山峨眉，9/25–9/26 回到成都。</p>
+              <button class="ghost-button" data-copy="9/18 成都；9/19–9/22 川西；9/23–9/24 樂山峨眉；9/25–9/26 成都；9/27 返程。">複製行程摘要</button>
+            </article>
+
+            <article class="info-card">
+              <span class="card-kicker">Private Tour</span>
+              <h4>4 人獨立成團</h4>
+              <p>全程以 7 座商務車為主要移動方式，景區內則依行程使用觀光車、索道與遊船。</p>
+              <button class="ghost-button" data-copy="4 人獨立成團，主要使用 7 座商務車；景區內另有觀光車、索道與遊船。">複製交通提醒</button>
+            </article>
+
+            <article class="info-card">
+              <span class="card-kicker">Nature</span>
+              <h4>黃龍＋九寨溝</h4>
+              <p>9/20 黃龍、9/21 九寨溝是自然景觀核心兩日；網站把這兩天獨立拉出，方便同行快速看重點。</p>
+              <button class="ghost-button" data-copy="9/20 黃龍；9/21 九寨溝，連續兩天為川西自然景觀主軸。">複製川西提醒</button>
+            </article>
+
+            <article class="info-card">
+              <span class="card-kicker">Culture</span>
+              <h4>三星堆＋成都慢生活</h4>
+              <p>9/25 熊貓基地、三星堆、錦里；9/26 人民公園、寬窄巷子與川劇變臉，調性從趕路切回成都。</p>
+              <button class="ghost-button" data-copy="9/25 熊貓基地＋三星堆＋錦里；9/26 人民公園＋寬窄巷子＋川劇變臉。">複製成都段提醒</button>
+            </article>
+          </div>
+
+          <div class="section-heading compact-heading">
+            <h3>執行提醒</h3>
+            <p>第一版先保留真正會影響當天節奏的資訊，不額外塞未確認店家與飯店。</p>
+          </div>
+
+          <div class="overview-grid">
+            <article class="info-card">
+              <span class="card-kicker">Mountain Days</span>
+              <h4>9/20–9/21 景區日</h4>
+              <p>黃龍與九寨溝都是完整景區日，行程以景區交通為主，前一晚與當晚不再硬塞其他景點。</p>
+            </article>
+
+            <article class="info-card">
+              <span class="card-kicker">Museum</span>
+              <h4>9/25 三星堆</h4>
+              <p>上午先走熊貓基地最早時段，下午三星堆博物館，晚上再回成都安排錦里。</p>
+            </article>
+
+            <article class="info-card">
+              <span class="card-kicker">Return</span>
+              <h4>9/27 分兩次送機</h4>
+              <p>正式行程只確認分兩次送機；等兩組航班時間確定後，再補成兩張 Flight Card。</p>
+            </article>
+          </div>
+
+          <div class="overview-photo-grid" aria-label="成都旅行精選圖片">
+            <figure class="photo-card">
+              <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80" alt="大熊貓" />
+              <figcaption>成都・熊貓</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="高山湖泊與山景" />
+              <figcaption>川西・黃龍／九寨溝</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="湖泊與山景" />
+              <figcaption>九寨溝</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80" alt="城市建築與街景" />
+              <figcaption>成都城市日</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80" alt="茶席與茶杯" />
+              <figcaption>人民公園・喝茶</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="view" id="itinerary">
+          <div class="section-heading">
+            <h3>每日行程</h3>
+            <p>點選日期查看 9/18–9/27 的 10 天 9 晚安排；第一版完全以現有正式行程順序為主。</p>
+          </div>
+          <div class="date-switcher" id="dateSwitcher"></div>
+          <div class="day-panel" id="dayPanel"></div>
+        </section>
+
+        <section class="view" id="places">
+          <div class="section-heading">
+            <div>
+              <h3>成都・川西景點資料</h3>
+              <p>先收錄這趟正式行程會用到的核心地點，可依區域／類型篩選並直接開啟 Google Maps。</p>
+            </div>
+            <div class="places-heading-tools">
+              <p id="placesStatus">第一版已整理行程核心地點。</p>
+              <div class="places-action-row">
+                <a class="ghost-button button-link" href="https://www.google.com/maps/search/?api=1&query=%E6%88%90%E9%83%BD" target="_blank" rel="noopener noreferrer">開啟成都地圖</a>
+              </div>
+            </div>
+          </div>
+          <div class="filter-row" id="placeFilters"></div>
+          <div class="places-grid" id="placesGrid"></div>
+        </section>
+
+        <section class="view" id="food">
+          <div class="section-heading">
+            <h3>四川美食清單</h3>
+            <p>第一版先以「想吃什麼」分類，不綁未確認店家；點卡片可直接搜尋附近店家，之後再把你們收藏的店逐一補進來。</p>
+          </div>
+          <div class="overview-photo-grid food-photo-strip" id="foodPhotoStrip" aria-label="四川美食圖片"></div>
+          <div class="filter-row" id="foodFilters"></div>
+          <div class="places-grid" id="foodGrid"></div>
+        </section>
+
+        <section class="view" id="notes">
+          <div class="section-heading">
+            <h3>旅伴備註</h3>
+            <div class="notes-heading-tools">
+              <p id="notesStatus">備註載入中...</p>
+              <button class="ghost-button" id="refreshNotesButton" type="button">重新整理備註</button>
+            </div>
+          </div>
+          <div class="notes-layout">
+            <form id="noteForm" class="note-form">
+              <label>
+                標題
+                <input id="noteTitle" name="title" placeholder="例如：三星堆門票／要訂的餐廳" required />
+              </label>
+              <label>
+                內容
+                <textarea id="noteBody" name="body" placeholder="寫下同行都需要看到的事情" required></textarea>
+              </label>
+              <button type="submit">新增備註</button>
+            </form>
+            <div class="note-list" id="noteList"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./config.js?v=22"></script>
+    <script src="./app.js?v=22"></script>
+  </body>
+</html>
