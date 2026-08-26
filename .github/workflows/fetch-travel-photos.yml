@@ -1,0 +1,77 @@
+name: Fetch travel photos
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/fetch-travel-photos.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Chengdu travel photos
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/photos
+
+          curl -L --fail --retry 3 \
+            "https://upload.wikimedia.org/wikipedia/commons/d/db/Chunxiroaddaytime.jpg" \
+            -o assets/photos/chunxi.jpg
+
+          curl -L --fail --retry 3 \
+            "https://upload.wikimedia.org/wikipedia/commons/8/8c/Giant_Panda_at_Chengdu_Panda_Base.jpg" \
+            -o assets/photos/panda.jpg
+
+          curl -L --fail --retry 3 \
+            "https://upload.wikimedia.org/wikipedia/commons/5/5c/Jiuzhaigou_Lake.jpg" \
+            -o assets/photos/jiuzhaigou.jpg
+
+          curl -L --fail --retry 3 \
+            "https://upload.wikimedia.org/wikipedia/commons/c/c4/Huanglonggou_Pools.jpg" \
+            -o assets/photos/huanglong.jpg
+
+          curl -L --fail --retry 3 \
+            "https://upload.wikimedia.org/wikipedia/commons/3/3c/Leshan_Giant_Buddha.jpg" \
+            -o assets/photos/leshan.jpg
+
+          curl -L --fail --retry 3 \
+            "https://upload.wikimedia.org/wikipedia/commons/5/5b/Golden_Top_of_Mount_Emei.jpg" \
+            -o assets/photos/emei.jpg
+
+          curl -L --fail --retry 3 \
+            "https://upload.wikimedia.org/wikipedia/commons/9/91/SanXingDui_Museum.jpg" \
+            -o assets/photos/sanxingdui.jpg
+
+          curl -L --fail --retry 3 \
+            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Street_scene_-_Kuanzhai_Alleys_-_Chengdu%2C_China_-_DSC05311.jpg" \
+            -o assets/photos/kuanzhai.jpg
+
+          echo "Downloaded:"
+          ls -lh assets/photos
+
+      - name: Commit photos
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/photos
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Add Chengdu travel photos"
+            git push
+          fi
