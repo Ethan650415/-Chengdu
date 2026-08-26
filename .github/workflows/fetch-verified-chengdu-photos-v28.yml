@@ -1,0 +1,176 @@
+name: Fetch verified Chengdu photos v28
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Download verified Wikimedia photos
+        shell: bash
+        run: |
+          set -u
+          mkdir -p assets/photos
+          rm -f assets/photos/.download-v28-*.tmp
+
+          success=0
+          failed=0
+
+          fetch_commons() {
+            local commons_name="$1"
+            local output_name="$2"
+            local tmp="assets/photos/.download-v28-${output_name}.tmp"
+
+            echo
+            echo "==> $commons_name -> $output_name"
+
+            local json
+            local media_url
+
+            if ! json="$(
+              curl -L --silent --show-error --fail --retry 3 --get                 "https://commons.wikimedia.org/w/api.php"                 --data-urlencode "action=query"                 --data-urlencode "format=json"                 --data-urlencode "prop=imageinfo"                 --data-urlencode "iiprop=url"                 --data-urlencode "iiurlwidth=1600"                 --data-urlencode "titles=File:${commons_name}"
+            )"; then
+              echo "::error::Commons API request failed: $commons_name"
+              failed=$((failed + 1))
+              return 0
+            fi
+
+            media_url="$(printf '%s' "$json" | jq -r '.query.pages[]?.imageinfo[0]?.thumburl // .query.pages[]?.imageinfo[0]?.url // empty')"
+
+            if [[ -z "$media_url" ]]; then
+              echo "::error::Commons file not resolved: $commons_name"
+              failed=$((failed + 1))
+              return 0
+            fi
+
+            if curl -L --fail --retry 3 --retry-delay 2               -A "ChengduTripWebsite/1.0 (GitHub Actions)"               "$media_url"               -o "$tmp"; then
+              if [[ -s "$tmp" ]]; then
+                mv "$tmp" "assets/photos/$output_name"
+                success=$((success + 1))
+                echo "OK: $output_name"
+              else
+                rm -f "$tmp"
+                echo "::error::Empty image: $commons_name"
+                failed=$((failed + 1))
+              fi
+            else
+              rm -f "$tmp"
+              echo "::error::Download failed: $commons_name"
+              failed=$((failed + 1))
+            fi
+          }
+
+          fetch_commons "Chunxi Road 20260514-2.jpg" "chunxi.jpg"
+          fetch_commons "Daci Temple Taikoo Li, Chengdu.jpg" "taikoo.jpg"
+          fetch_commons "ChengduJinli.jpg" "jinli.jpg"
+          fetch_commons "Teahouse in Peoples Park - Chengdu, China - DSC05348.jpg" "peoples_park.jpg"
+          fetch_commons "Wide and Narrow Alleys, Chengdu (20240905).jpg" "kuanzhai.jpg"
+          fetch_commons "Dujiangyan Irrigation System.jpg" "dujiangyan_1.jpg"
+          fetch_commons "Dujiangyan Scenic Area 36613-Dujiangyan (49068399917).jpg" "dujiangyan_2.jpg"
+          fetch_commons "Songpan Old Town.jpg" "songpan_1.jpg"
+          fetch_commons "松潘古城 2024-06-17 03.jpg" "songpan_2.jpg"
+          fetch_commons "Huanglonggou Pools.jpg" "huanglong_1.jpg"
+          fetch_commons "Huanglong-calcific-ponds.jpg" "huanglong_2.jpg"
+          fetch_commons "HuanglongWaterfall.jpg" "huanglong_3.jpg"
+          fetch_commons "九寨溝五花海.JPG" "jiuzhaigou_1.jpg"
+          fetch_commons "Long Lake Jiuzhaigou.jpg" "jiuzhaigou_2.jpg"
+          fetch_commons "Nuorilang falls.jpg" "jiuzhaigou_3.jpg"
+          fetch_commons "Leshan Giant Buddha.jpg" "leshan_1.jpg"
+          fetch_commons "Leshan Giant Buddha 20260514-8.jpg" "leshan_2.jpg"
+          fetch_commons "GoldenSummit.JPG" "emei_1.jpg"
+          fetch_commons "Golden Summit, Mount Emei, China, August 2016.jpg" "emei_2.jpg"
+          fetch_commons "Giant Panda at Chengdu Panda Base.jpg" "panda_1.jpg"
+          fetch_commons "Chengdu Research Base of Giant Panda Breeding, 201907, 05.jpg" "panda_2.jpg"
+          fetch_commons "Chengdu Research Base of Giant Panda Breeding, 201907, 09.jpg" "panda_entrance.jpg"
+          fetch_commons "SanXingDui Museum.jpg" "sanxingdui_1.jpg"
+          fetch_commons "Sanxingdui Museum 20260512-1.jpg" "sanxingdui_2.jpg"
+          fetch_commons "Sanxingdui Museum 20260512-6.jpg" "sanxingdui_3.jpg"
+          fetch_commons "Jinli Street - Chengdu, China - DSC05399.jpg" "jinli_2.jpg"
+          fetch_commons "Tea in People's Park - Chengdu, China - DSC05362.jpg" "peoples_park_2.jpg"
+          fetch_commons "Wide and Narrow Alleys (53691068061).jpg" "kuanzhai_2.jpg"
+          fetch_commons "Welcome-Ponds Huanglong Sichuan China.jpg" "huanglong_4.jpg"
+          fetch_commons "Long Lake (Jiuzhaigou) 20260511-1.jpg" "jiuzhaigou_4.jpg"
+          fetch_commons "Leshan giant Buddha.jpg" "leshan_3.jpg"
+          fetch_commons "Chengdu Research Base of Giant Panda Breeding, 201907, 10.jpg" "panda_3.jpg"
+          fetch_commons "Sanxingdui Museum 20260512-7.jpg" "sanxingdui_4.jpg"
+
+          echo
+          echo "======================================"
+          echo "Downloaded successfully: $success"
+          echo "Failed: $failed"
+          echo "======================================"
+          find assets/photos -maxdepth 1 -type f -printf '%f\n' | sort
+
+          # HARD GATE: a green workflow means the photo library really exists.
+          if [[ "$success" -lt 25 ]]; then
+            echo "::error::Only $success verified photos downloaded; expected at least 25."
+            exit 1
+          fi
+
+          # Check all core v27 filenames actually exist.
+          core_files=(
+            "chunxi.jpg"
+            "taikoo.jpg"
+            "jinli.jpg"
+            "peoples_park.jpg"
+            "kuanzhai.jpg"
+            "dujiangyan_1.jpg"
+            "dujiangyan_2.jpg"
+            "songpan_1.jpg"
+            "songpan_2.jpg"
+            "huanglong_1.jpg"
+            "huanglong_2.jpg"
+            "huanglong_3.jpg"
+            "jiuzhaigou_1.jpg"
+            "jiuzhaigou_2.jpg"
+            "jiuzhaigou_3.jpg"
+            "leshan_1.jpg"
+            "leshan_2.jpg"
+            "emei_1.jpg"
+            "emei_2.jpg"
+            "panda_1.jpg"
+            "panda_2.jpg"
+            "panda_entrance.jpg"
+            "sanxingdui_1.jpg"
+            "sanxingdui_2.jpg"
+            "sanxingdui_3.jpg"
+          )
+
+          missing=0
+          for f in "${core_files[@]}"; do
+            if [[ ! -s "assets/photos/$f" ]]; then
+              echo "::error::Missing core file: $f"
+              missing=$((missing + 1))
+            fi
+          done
+
+          if [[ "$missing" -ne 0 ]]; then
+            echo "::error::$missing core v27 photo files are missing."
+            exit 1
+          fi
+
+      - name: Commit verified photos
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/photos
+
+          if git diff --cached --quiet; then
+            echo "Files already present; nothing new to commit."
+          else
+            git commit -m "Add verified Chengdu photo library v28"
+            git push origin HEAD:main
+          fi
