@@ -212,8 +212,10 @@ main {
   background:
     linear-gradient(90deg, rgba(7,31,27,.88) 0%, rgba(7,31,27,.54) 44%, rgba(7,31,27,.1) 78%),
     linear-gradient(0deg, rgba(7,31,27,.72), transparent 55%),
+    url("./assets/photos/jiuzhaigou.jpg")
+      center 44%/cover no-repeat,
     url("./assets/hero.svg")
-      center 44%/cover;
+      center 44%/cover no-repeat;
 }
 
 .hero::before {
@@ -862,8 +864,10 @@ main {
     border-radius: 25px;
     background:
       linear-gradient(0deg, rgba(7,31,27,.78) 0%, rgba(7,31,27,.28) 58%, rgba(7,31,27,.10)),
+      url("./assets/photos/jiuzhaigou.jpg")
+        center/cover no-repeat,
       url("./assets/hero.svg")
-        center/cover;
+        center/cover no-repeat;
   }
 
   .hero::before {
@@ -990,3 +994,22 @@ main {
 
 .cn-mode-badge{position:relative;z-index:2;display:flex;align-items:center;gap:10px;width:fit-content;margin:0 28px 14px;padding:8px 12px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:rgba(255,255,255,.88);background:rgba(7,31,27,.28);backdrop-filter:blur(12px);font-size:11px}.cn-mode-badge span{color:#f1cf94;font-weight:900}.cn-mode-badge strong{font-weight:700}
 @media(max-width:820px){.cn-mode-badge{width:auto;margin:0 16px 12px;border-radius:15px;align-items:flex-start;flex-direction:column;gap:2px}}
+
+.image-credits {
+  margin: 14px 4px 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.image-credits summary {
+  width: fit-content;
+  cursor: pointer;
+  color: var(--ink);
+  font-weight: 800;
+}
+.image-credits p {
+  max-width: 820px;
+}
+.image-credits a {
+  color: var(--red-dark);
+}

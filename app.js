@@ -4,6 +4,19 @@ const searchLink = (query) =>
 const mapLink = (query) =>
   `https://uri.amap.com/search?keyword=${encodeURIComponent(query)}&view=map&src=chengdu-trip&callnative=1`;
 
+document.addEventListener(
+  "error",
+  (event) => {
+    const image = event.target;
+    if (!(image instanceof HTMLImageElement)) return;
+    const fallback = image.dataset.fallback;
+    if (!fallback || image.dataset.fallbackUsed === "1") return;
+    image.dataset.fallbackUsed = "1";
+    image.src = fallback;
+  },
+  true,
+);
+
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js").catch(() => {
@@ -14,8 +27,9 @@ if ("serviceWorker" in navigator) {
 
 const images = {
   panda: {
-    src: "./assets/panda.svg",
-    alt: "大熊貓",
+    src: "./assets/photos/panda.jpg",
+    fallback: "./assets/panda.svg",
+    alt: "成都大熊貓繁育研究基地的大熊貓",
   },
   mountain: {
     src: "./assets/mountain.svg",
@@ -26,8 +40,39 @@ const images = {
     alt: "湖泊與山景",
   },
   city: {
-    src: "./assets/city.svg",
-    alt: "城市街景",
+    src: "./assets/photos/chunxi.jpg",
+    fallback: "./assets/city.svg",
+    alt: "成都春熙路街景",
+  },
+  huanglong: {
+    src: "./assets/photos/huanglong.jpg",
+    fallback: "./assets/mountain.svg",
+    alt: "四川黃龍彩池",
+  },
+  jiuzhaigou: {
+    src: "./assets/photos/jiuzhaigou.jpg",
+    fallback: "./assets/lake.svg",
+    alt: "四川九寨溝湖泊",
+  },
+  leshan: {
+    src: "./assets/photos/leshan.jpg",
+    fallback: "./assets/lake.svg",
+    alt: "四川樂山大佛",
+  },
+  emei: {
+    src: "./assets/photos/emei.jpg",
+    fallback: "./assets/mountain.svg",
+    alt: "四川峨眉山金頂",
+  },
+  sanxingdui: {
+    src: "./assets/photos/sanxingdui.jpg",
+    fallback: "./assets/city.svg",
+    alt: "三星堆博物館",
+  },
+  kuanzhai: {
+    src: "./assets/photos/kuanzhai.jpg",
+    fallback: "./assets/city.svg",
+    alt: "成都寬窄巷子",
   },
   tea: {
     src: "./assets/tea.svg",
@@ -132,7 +177,7 @@ const itinerary = [
     title: "黃龍一日遊 → 九寨溝口",
     theme: "上行索道＋動車到五彩池",
     photos: [
-      { ...images.mountain, caption: "黃龍" },
+      { ...images.huanglong, caption: "黃龍彩池" },
       { ...images.lake, caption: "五彩池" },
     ],
     items: [
@@ -168,7 +213,7 @@ const itinerary = [
     title: "九寨溝全天 → 松潘古城",
     theme: "景區觀光車為主，完整留給九寨溝",
     photos: [
-      { ...images.lake, caption: "九寨溝" },
+      { ...images.jiuzhaigou, caption: "九寨溝" },
       { ...images.mountain, caption: "川西山水" },
     ],
     items: [
@@ -241,8 +286,8 @@ const itinerary = [
     title: "成都 → 樂山大佛 → 峨眉山",
     theme: "樂山採遊船路線，下午前往報國寺區域",
     photos: [
-      { ...images.lake, caption: "樂山水岸" },
-      { ...images.mountain, caption: "前往峨眉" },
+      { ...images.leshan, caption: "樂山大佛" },
+      { ...images.emei, caption: "前往峨眉" },
     ],
     items: [
       {
@@ -278,7 +323,7 @@ const itinerary = [
     title: "峨眉山金頂一日遊 → 成都",
     theme: "景區觀光車＋索道為主",
     photos: [
-      { ...images.mountain, caption: "峨眉山" },
+      { ...images.emei, caption: "峨眉山金頂" },
       { ...images.lake, caption: "山景日" },
     ],
     items: [
@@ -315,7 +360,7 @@ const itinerary = [
     theme: "上午最早時段看熊貓，下午三星堆",
     photos: [
       { ...images.panda, caption: "成都大熊貓基地" },
-      { ...images.city, caption: "成都文化日" },
+      { ...images.sanxingdui, caption: "三星堆博物館" },
     ],
     items: [
       {
@@ -351,7 +396,7 @@ const itinerary = [
     theme: "自由活動＋川劇變臉",
     photos: [
       { ...images.tea, caption: "人民公園喝茶" },
-      { ...images.city, caption: "成都巷弄" },
+      { ...images.kuanzhai, caption: "寬窄巷子" },
     ],
     items: [
       {
@@ -451,7 +496,7 @@ const places = [
     name: "黃龍風景名勝區",
     type: "川西",
     area: "黃龍",
-    image: images.mountain,
+    image: images.huanglong,
     body: "9/20 全天核心景區，行程安排上行索道與五彩池。",
     links: [{ label: "地圖", url: mapLink("黃龍風景名勝區 四川") }],
   },
@@ -459,7 +504,7 @@ const places = [
     name: "九寨溝",
     type: "川西",
     area: "九寨溝",
-    image: images.lake,
+    image: images.jiuzhaigou,
     body: "9/21 完整一日，景區內以觀光車移動。",
     links: [{ label: "地圖", url: mapLink("九寨溝風景名勝區") }],
   },
@@ -483,7 +528,7 @@ const places = [
     name: "樂山大佛",
     type: "樂山峨眉",
     area: "樂山",
-    image: images.lake,
+    image: images.leshan,
     body: "9/23 採遊船路線觀看大佛，之後在樂山市區午餐。",
     links: [{ label: "地圖", url: mapLink("樂山大佛") }],
   },
@@ -491,7 +536,7 @@ const places = [
     name: "峨眉山金頂",
     type: "樂山峨眉",
     area: "峨眉山",
-    image: images.mountain,
+    image: images.emei,
     body: "9/24 一日遊核心，景區觀光車與索道為主。",
     links: [{ label: "地圖", url: mapLink("峨眉山 金頂") }],
   },
@@ -507,7 +552,7 @@ const places = [
     name: "三星堆博物館",
     type: "人文",
     area: "廣漢",
-    image: images.city,
+    image: images.sanxingdui,
     body: "9/25 下午的文化重點，後續可再補實際預約與入館時間。",
     links: [{ label: "地圖", url: mapLink("三星堆博物館") }],
   },
@@ -531,7 +576,7 @@ const places = [
     name: "寬窄巷子",
     type: "成都",
     area: "青羊區",
-    image: images.city,
+    image: images.kuanzhai,
     body: "9/26 下午安排，可與自由活動、採買放在一起。",
     links: [{ label: "地圖", url: mapLink("成都 寬窄巷子") }],
   },
@@ -701,7 +746,7 @@ function renderPhotos(photos) {
         .map(
           (photo) => `
             <figure class="photo-card">
-              <img src="${safeExternalUrl(photo.src)}" alt="${escapeHtml(photo.alt)}" loading="lazy" />
+              <img src="${safeExternalUrl(photo.src)}" data-fallback="${escapeHtml(photo.fallback || "")}" alt="${escapeHtml(photo.alt)}" loading="lazy" />
               <figcaption>${escapeHtml(photo.caption)}</figcaption>
             </figure>
           `,
@@ -820,7 +865,7 @@ function renderPlaces() {
         <article class="place-card">
           ${
             place.image
-              ? `<img class="place-image" src="${safeExternalUrl(place.image.src)}" alt="${escapeHtml(place.image.alt)}" loading="lazy" />`
+              ? `<img class="place-image" src="${safeExternalUrl(place.image.src)}" data-fallback="${escapeHtml(place.image.fallback || "")}" alt="${escapeHtml(place.image.alt)}" loading="lazy" />`
               : ""
           }
           <span class="card-kicker">${escapeHtml(place.area)}</span>
@@ -881,7 +926,7 @@ function renderFoodPhotoStrip() {
     .map(
       (photo) => `
         <figure class="photo-card">
-          <img src="${safeExternalUrl(photo.src)}" alt="${escapeHtml(photo.alt)}" loading="lazy" />
+          <img src="${safeExternalUrl(photo.src)}" data-fallback="${escapeHtml(photo.fallback || "")}" alt="${escapeHtml(photo.alt)}" loading="lazy" />
           <figcaption>${escapeHtml(photo.caption)}</figcaption>
         </figure>
       `,
@@ -902,7 +947,7 @@ function renderFood() {
         <article class="place-card food-card">
           ${
             restaurant.image
-              ? `<img class="place-image" src="${safeExternalUrl(restaurant.image.src)}" alt="${escapeHtml(restaurant.image.alt)}" loading="lazy" />`
+              ? `<img class="place-image" src="${safeExternalUrl(restaurant.image.src)}" data-fallback="${escapeHtml(restaurant.image.fallback || "")}" alt="${escapeHtml(restaurant.image.alt)}" loading="lazy" />`
               : ""
           }
           <span class="card-kicker">${escapeHtml(restaurant.area)} · ${escapeHtml(restaurant.day)}</span>

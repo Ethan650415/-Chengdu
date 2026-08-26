@@ -1,0 +1,74 @@
+[
+  {
+    "file": "chunxi.jpg",
+    "title": "成都・春熙路",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Chunxiroaddaytime.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chunxiroaddaytime.jpg",
+    "credit": "BenBen",
+    "license": "CC BY 1.0",
+    "license_url": "https://creativecommons.org/licenses/by/1.0/"
+  },
+  {
+    "file": "panda.jpg",
+    "title": "成都大熊貓繁育研究基地",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Giant_Panda_at_Chengdu_Panda_Base.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Giant_Panda_at_Chengdu_Panda_Base.jpg",
+    "credit": "Mikael Häggström",
+    "license": "Public domain",
+    "license_url": "https://commons.wikimedia.org/wiki/File:Giant_Panda_at_Chengdu_Panda_Base.jpg"
+  },
+  {
+    "file": "jiuzhaigou.jpg",
+    "title": "九寨溝",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Jiuzhaigou_Lake.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jiuzhaigou_Lake.jpg",
+    "credit": "Gjl / Wikimedia Commons",
+    "license": "CC BY-SA 3.0 / GFDL",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  {
+    "file": "huanglong.jpg",
+    "title": "黃龍彩池",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Huanglonggou_Pools.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Huanglonggou_Pools.jpg",
+    "credit": "Gjl / Wikimedia Commons",
+    "license": "CC BY-SA 3.0 / GFDL",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  {
+    "file": "leshan.jpg",
+    "title": "樂山大佛",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Leshan_Giant_Buddha.jpg/1280px-Leshan_Giant_Buddha.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha.jpg",
+    "credit": "Bernt Rostad; modified by Rbmk",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  {
+    "file": "emei.jpg",
+    "title": "峨眉山金頂",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Golden_Top_of_Mount_Emei.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Golden_Top_of_Mount_Emei.jpg",
+    "credit": "Zhou Yuji1028",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "file": "sanxingdui.jpg",
+    "title": "三星堆博物館",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/SanXingDui_Museum.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:SanXingDui_Museum.jpg",
+    "credit": "Jason Zou",
+    "license": "Public domain",
+    "license_url": "https://commons.wikimedia.org/wiki/File:SanXingDui_Museum.jpg"
+  },
+  {
+    "file": "kuanzhai.jpg",
+    "title": "寬窄巷子",
+    "url": "https://live.staticflickr.com/4655/25312817167_c9db951918_o.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:%E6%88%90%E9%83%BD_%E5%AF%AC%E7%AA%84%E5%B7%B7%E5%AD%90_(25312817167).jpg",
+    "credit": "Ann Lee",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/"
+  }
+]

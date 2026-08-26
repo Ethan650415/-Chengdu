@@ -10,7 +10,7 @@
     <title>成都旅伴手冊｜2026.09.18–09.27</title>
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-    <link rel="stylesheet" href="./styles.css?v=24" />
+    <link rel="stylesheet" href="./styles.css?v=25" />
   </head>
   <body>
     <div class="app-shell">
@@ -140,26 +140,35 @@
 
           <div class="overview-photo-grid" aria-label="成都旅行精選圖片">
             <figure class="photo-card">
-              <img src="./assets/panda.svg" alt="大熊貓" />
-              <figcaption>成都・熊貓</figcaption>
+              <img src="./assets/photos/panda.jpg" data-fallback="./assets/panda.svg" alt="成都大熊貓繁育研究基地的大熊貓" />
+              <figcaption>成都・熊貓基地</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="./assets/mountain.svg" alt="高山湖泊與山景" />
-              <figcaption>川西・黃龍／九寨溝</figcaption>
+              <img src="./assets/photos/huanglong.jpg" data-fallback="./assets/mountain.svg" alt="四川黃龍彩池" />
+              <figcaption>川西・黃龍</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="./assets/lake.svg" alt="湖泊與山景" />
+              <img src="./assets/photos/jiuzhaigou.jpg" data-fallback="./assets/lake.svg" alt="四川九寨溝湖泊" />
               <figcaption>九寨溝</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="./assets/city.svg" alt="城市建築與街景" />
-              <figcaption>成都城市日</figcaption>
+              <img src="./assets/photos/sanxingdui.jpg" data-fallback="./assets/city.svg" alt="三星堆博物館" />
+              <figcaption>三星堆博物館</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="./assets/tea.svg" alt="茶席與茶杯" />
-              <figcaption>人民公園・喝茶</figcaption>
+              <img src="./assets/photos/kuanzhai.jpg" data-fallback="./assets/city.svg" alt="成都寬窄巷子" />
+              <figcaption>成都・寬窄巷子</figcaption>
             </figure>
           </div>
+
+          <details class="image-credits">
+            <summary>實景照片來源與授權</summary>
+            <p>
+              實景照選自 Wikimedia Commons 等自由授權來源，部署後會下載到本網站的
+              <code>assets/photos/</code>，旅行時不需連回圖片網站。完整攝影者、來源與授權請見
+              <a href="./IMAGE_CREDITS.md" target="_blank" rel="noopener noreferrer">IMAGE_CREDITS.md</a>。
+            </p>
+          </details>
         </section>
 
         <section class="view" id="itinerary">
@@ -225,6 +234,15 @@
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="./app.js?v=24"></script>
+    <script>
+      document.addEventListener("error", function (event) {
+        var image = event.target;
+        if (image && image.tagName === "IMG" && image.dataset.fallback && image.dataset.fallbackUsed !== "1") {
+          image.dataset.fallbackUsed = "1";
+          image.src = image.dataset.fallback;
+        }
+      }, true);
+    </script>
+    <script src="./app.js?v=25"></script>
   </body>
 </html>
