@@ -10,7 +10,7 @@
     <title>成都旅伴手冊｜2026.09.18–09.27</title>
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-    <link rel="stylesheet" href="./styles.css?v=22" />
+    <link rel="stylesheet" href="./styles.css?v=24" />
   </head>
   <body>
     <div class="app-shell">
@@ -60,6 +60,7 @@
               回到成都後再前往樂山、峨眉山，最後用熊貓、三星堆、茶館與川劇收尾。
             </p>
           </div>
+          <div class="cn-mode-badge"><span>中國境內模式</span><strong>高德地圖 · 百度搜尋 · 本地圖片 · 離線行程</strong></div>
           <div class="weather-strip" aria-label="旅行主軸">
             <div>
               <span>成都</span>
@@ -79,7 +80,7 @@
         <section class="view is-visible" id="overview">
           <div class="section-heading">
             <h3>旅行總覽</h3>
-            <p>第一版依旅行社 10 天 9 晚正式路線整理；飯店、司機與兩組送機細節仍保留待補欄位。</p>
+            <p>依旅行社 10 天 9 晚正式路線整理；網站已改為中國境內使用版，高德／百度為外部入口，行程與圖片本身可離線查看。</p>
           </div>
 
           <div class="overview-grid">
@@ -139,23 +140,23 @@
 
           <div class="overview-photo-grid" aria-label="成都旅行精選圖片">
             <figure class="photo-card">
-              <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80" alt="大熊貓" />
+              <img src="./assets/panda.svg" alt="大熊貓" />
               <figcaption>成都・熊貓</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="高山湖泊與山景" />
+              <img src="./assets/mountain.svg" alt="高山湖泊與山景" />
               <figcaption>川西・黃龍／九寨溝</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="湖泊與山景" />
+              <img src="./assets/lake.svg" alt="湖泊與山景" />
               <figcaption>九寨溝</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80" alt="城市建築與街景" />
+              <img src="./assets/city.svg" alt="城市建築與街景" />
               <figcaption>成都城市日</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80" alt="茶席與茶杯" />
+              <img src="./assets/tea.svg" alt="茶席與茶杯" />
               <figcaption>人民公園・喝茶</figcaption>
             </figure>
           </div>
@@ -174,12 +175,12 @@
           <div class="section-heading">
             <div>
               <h3>成都・川西景點資料</h3>
-              <p>先收錄這趟正式行程會用到的核心地點，可依區域／類型篩選並直接開啟 Google Maps。</p>
+              <p>先收錄這趟正式行程會用到的核心地點，可依區域／類型篩選並直接開啟高德地圖。</p>
             </div>
             <div class="places-heading-tools">
               <p id="placesStatus">第一版已整理行程核心地點。</p>
               <div class="places-action-row">
-                <a class="ghost-button button-link" href="https://www.google.com/maps/search/?api=1&query=%E6%88%90%E9%83%BD" target="_blank" rel="noopener noreferrer">開啟成都地圖</a>
+                <a class="ghost-button button-link" href="https://uri.amap.com/search?keyword=%E6%88%90%E9%83%BD&view=map&src=chengdu-trip&callnative=1" target="_blank" rel="noopener noreferrer">高德・成都地圖</a>
               </div>
             </div>
           </div>
@@ -224,7 +225,6 @@
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="./config.js?v=22"></script>
-    <script src="./app.js?v=22"></script>
+    <script src="./app.js?v=24"></script>
   </body>
 </html>

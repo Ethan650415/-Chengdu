@@ -1,8 +1,8 @@
 const searchLink = (query) =>
-  `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+  `https://www.baidu.com/s?wd=${encodeURIComponent(query)}`;
 
 const mapLink = (query) =>
-  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  `https://uri.amap.com/search?keyword=${encodeURIComponent(query)}&view=map&src=chengdu-trip&callnative=1`;
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -14,39 +14,39 @@ if ("serviceWorker" in navigator) {
 
 const images = {
   panda: {
-    src: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/panda.svg",
     alt: "大熊貓",
   },
   mountain: {
-    src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/mountain.svg",
     alt: "高山與湖泊景觀",
   },
   lake: {
-    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/lake.svg",
     alt: "湖泊與山景",
   },
   city: {
-    src: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/city.svg",
     alt: "城市街景",
   },
   tea: {
-    src: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/tea.svg",
     alt: "茶杯與茶席",
   },
   hotpot: {
-    src: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/hotpot.svg",
     alt: "熱鍋料理",
   },
   noodles: {
-    src: "https://images.unsplash.com/photo-1557872943-16a5ac26437e?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/noodles.svg",
     alt: "麵食料理",
   },
   snack: {
-    src: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/snack.svg",
     alt: "炸物與街頭小吃",
   },
   dessert: {
-    src: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80",
+    src: "./assets/dessert.svg",
     alt: "甜點",
   },
 };
@@ -428,7 +428,7 @@ const places = [
     body: "抵達成都第一晚的市區散步主軸，可與太古里排在一起。",
     links: [
       { label: "地圖", url: mapLink("成都 春熙路") },
-      { label: "導航", url: "https://www.google.com/maps/dir/?api=1&destination=%E6%88%90%E9%83%BD%20%E6%98%A5%E7%86%99%E8%B7%AF" },
+      { label: "高德", url: mapLink("成都 春熙路") },
     ],
   },
   {
@@ -918,121 +918,19 @@ function renderFood() {
     .join("");
 }
 
-// Notes: use a dedicated Chengdu table when configured; otherwise localStorage.
-// Optional config.js:
-// window.TRIP_APP_CONFIG = {
-//   supabaseUrl: "...",
-//   supabaseAnonKey: "...",
-//   chengduNotesTable: "chengdu_trip_notes"
-// };
-
-const appConfig = window.TRIP_APP_CONFIG || {};
-const notesTable = appConfig.chengduNotesTable || "chengdu_trip_notes";
-let cloudNotesEnabled = Boolean(appConfig.supabaseUrl && appConfig.supabaseAnonKey);
-const supabaseBaseUrl = (appConfig.supabaseUrl || "")
-  .replace(/\/rest\/v1\/?$/, "")
-  .replace(/\/$/, "");
-
-function noteHeaders({ json = true } = {}) {
-  const headers = {
-    apikey: appConfig.supabaseAnonKey,
-    Accept: "application/json",
-  };
-  if (json) headers["Content-Type"] = "application/json";
-  return headers;
-}
-
-async function parseSupabaseError(response) {
-  let detail = "";
-  try {
-    const payload = await response.clone().json();
-    detail = payload?.message || payload?.hint || payload?.details || payload?.code || "";
-  } catch {
-    try {
-      detail = (await response.clone().text()).slice(0, 160);
-    } catch {
-      detail = "";
-    }
-  }
-  return detail ? `${response.status} ${detail}` : String(response.status);
-}
-
-function notesEndpoint(query = "") {
-  return `${supabaseBaseUrl}/rest/v1/${notesTable}${query}`;
-}
+// Notes: China/offline edition. Stored only on this device.
+const NOTES_STORAGE_KEY = "chengdu-trip-notes-v23";
 
 function localNotes() {
   try {
-    return JSON.parse(localStorage.getItem("chengdu-trip-notes") || "[]");
+    return JSON.parse(localStorage.getItem(NOTES_STORAGE_KEY) || "[]");
   } catch {
     return [];
   }
 }
 
 function saveLocalNotes(notes) {
-  localStorage.setItem("chengdu-trip-notes", JSON.stringify(notes));
-}
-
-async function fetchNotes() {
-  if (!cloudNotesEnabled) return localNotes();
-
-  const response = await fetch(
-    notesEndpoint("?select=id,title,body,created_at&order=created_at.desc"),
-    {
-      headers: {
-        ...noteHeaders(),
-        "Cache-Control": "no-cache",
-        Pragma: "no-cache",
-      },
-      cache: "no-store",
-    },
-  );
-
-  if (!response.ok) {
-    throw new Error(`notes_fetch_failed:${await parseSupabaseError(response)}`);
-  }
-  return response.json();
-}
-
-async function createNote(note) {
-  if (!cloudNotesEnabled) {
-    const notes = localNotes();
-    notes.unshift({ ...note, id: crypto.randomUUID?.() || String(Date.now()) });
-    saveLocalNotes(notes);
-    return;
-  }
-
-  const response = await fetch(notesEndpoint(""), {
-    method: "POST",
-    headers: { ...noteHeaders(), Prefer: "return=minimal" },
-    body: JSON.stringify(note),
-  });
-
-  if (!response.ok) {
-    throw new Error(`notes_create_failed:${await parseSupabaseError(response)}`);
-  }
-}
-
-async function deleteNote(noteId) {
-  if (!cloudNotesEnabled) {
-    saveLocalNotes(localNotes().filter((note) => String(note.id) !== String(noteId)));
-    return;
-  }
-
-  const response = await fetch(notesEndpoint(`?id=eq.${encodeURIComponent(noteId)}`), {
-    method: "DELETE",
-    headers: {
-      ...noteHeaders(),
-      Prefer: "return=minimal",
-      "Cache-Control": "no-cache",
-      Pragma: "no-cache",
-    },
-    cache: "no-store",
-  });
-
-  if (!response.ok) {
-    throw new Error(`notes_delete_failed:${await parseSupabaseError(response)}`);
-  }
+  localStorage.setItem(NOTES_STORAGE_KEY, JSON.stringify(notes));
 }
 
 function renderNotesList(notes) {
@@ -1049,79 +947,43 @@ function renderNotesList(notes) {
           `,
         )
         .join("")
-    : `<article class="note-card"><h4>尚無備註</h4><p>可以先新增航班、門票、餐廳、分工或購物清單。</p></article>`;
+    : `<article class="note-card"><h4>尚無備註</h4><p>可新增航班、門票、餐廳、分工或購物清單；內容會儲存在這台裝置。</p></article>`;
 }
 
-async function renderNotes() {
+function renderNotes() {
   if (!notesStatus || !noteList) return;
-
-  notesStatus.textContent = cloudNotesEnabled
-    ? "雲端同步模式：成都旅伴會共用同一份備註。"
-    : "本機模式：目前只存在這台裝置。";
-
-  try {
-    const notes = await fetchNotes();
-    renderNotesList(notes);
-  } catch (error) {
-    console.warn("Chengdu cloud notes load failed; falling back to local notes", error);
-    cloudNotesEnabled = false;
-    notesStatus.textContent = "成都雲端備註表尚未設定，已自動切換成本機模式。";
-    renderNotesList(localNotes());
-  }
+  notesStatus.textContent = "離線本機模式：備註儲存在這台裝置，不依賴外部雲端服務。";
+  renderNotesList(localNotes());
 }
 
-noteList?.addEventListener("click", async (event) => {
+noteList?.addEventListener("click", (event) => {
   const button = event.target.closest("[data-delete-note]");
   if (!button) return;
-
   const noteId = button.dataset.deleteNote;
-  button.disabled = true;
-  button.textContent = "刪除中...";
-
-  try {
-    await deleteNote(noteId);
-    await renderNotes();
-    showToast("備註已刪除");
-  } catch (error) {
-    console.warn("Note delete failed", error);
-    cloudNotesEnabled = false;
-    button.disabled = false;
-    button.textContent = "刪除";
-    showToast("雲端刪除失敗，已切換成本機模式");
-  }
+  saveLocalNotes(localNotes().filter((note) => String(note.id) !== String(noteId)));
+  renderNotes();
+  showToast("備註已刪除");
 });
 
-refreshNotesButton?.addEventListener("click", async () => {
-  refreshNotesButton.disabled = true;
-  refreshNotesButton.textContent = "整理中...";
-  await renderNotes();
-  refreshNotesButton.disabled = false;
-  refreshNotesButton.textContent = "重新整理備註";
+refreshNotesButton?.addEventListener("click", () => {
+  renderNotes();
+  showToast("備註已重新整理");
 });
 
-noteForm?.addEventListener("submit", async (event) => {
+noteForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(noteForm);
   const note = {
+    id: crypto.randomUUID?.() || String(Date.now()),
     title: String(formData.get("title")).trim(),
     body: String(formData.get("body")).trim(),
   };
-
-  try {
-    await createNote(note);
-    noteForm.reset();
-    await renderNotes();
-    showToast(cloudNotesEnabled ? "備註已同步" : "備註已新增到本機");
-  } catch (error) {
-    console.warn("Cloud note create failed; saving locally", error);
-    cloudNotesEnabled = false;
-    const notes = localNotes();
-    notes.unshift({ ...note, id: crypto.randomUUID?.() || String(Date.now()) });
-    saveLocalNotes(notes);
-    noteForm.reset();
-    await renderNotes();
-    showToast("雲端表尚未設定，已改存本機");
-  }
+  const notes = localNotes();
+  notes.unshift(note);
+  saveLocalNotes(notes);
+  noteForm.reset();
+  renderNotes();
+  showToast("備註已儲存在本機");
 });
 
 renderDateSwitcher();

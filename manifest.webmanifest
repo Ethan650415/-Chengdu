@@ -1,10 +1,11 @@
 {
   "name": "成都旅伴手冊",
   "short_name": "成都旅伴",
+  "description": "成都・川西 10 天 9 晚離線旅伴手冊",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f5f2ea",
+  "background_color": "#f4efe5",
   "theme_color": "#173d36",
   "lang": "zh-Hant",
   "icons": [
