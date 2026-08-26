@@ -1,15 +1,5 @@
-const CACHE_NAME="chengdu-trip-cn-v26";
-const PRECACHE=["./", "./index.html", "./styles.css?v=26", "./app.js?v=26", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./assets/city.svg", "./assets/dessert.svg", "./assets/hero.svg", "./assets/hotpot.svg", "./assets/lake.svg", "./assets/mountain.svg", "./assets/noodles.svg", "./assets/panda.svg", "./assets/sidebar.svg", "./assets/snack.svg", "./assets/tea.svg"];
-self.addEventListener("install",(event)=>{event.waitUntil(caches.open(CACHE_NAME).then((cache)=>cache.addAll(PRECACHE)).then(()=>self.skipWaiting()));});
-self.addEventListener("activate",(event)=>{event.waitUntil(caches.keys().then((keys)=>Promise.all(keys.filter((key)=>key!==CACHE_NAME).map((key)=>caches.delete(key)))).then(()=>self.clients.claim()));});
-self.addEventListener("fetch",(event)=>{
- const request=event.request;
- if(request.method!=="GET")return;
- const url=new URL(request.url);
- if(url.origin!==self.location.origin)return;
- if(request.mode==="navigate"){
-  event.respondWith(fetch(request).then((response)=>{const copy=response.clone();caches.open(CACHE_NAME).then((cache)=>cache.put("./index.html",copy));return response;}).catch(()=>caches.match("./index.html")));
-  return;
- }
- event.respondWith(caches.match(request).then((cached)=>cached||fetch(request).then((response)=>{if(response&&response.ok){const copy=response.clone();caches.open(CACHE_NAME).then((cache)=>cache.put(request,copy));}return response;})));
-});
+const CACHE='chengdu-final-v30';
+const ASSETS=["./", "./index.html", "./styles.css?v=30", "./app.js?v=30", "./manifest.webmanifest", "./IMAGE_CREDITS.html", "./photo-credits.json", "./assets/photos/chunxi.jpg", "./assets/photos/taikoo.jpg", "./assets/photos/jinli.jpg", "./assets/photos/peoples_park.jpg", "./assets/photos/kuanzhai.jpg", "./assets/photos/dujiangyan_1.jpg", "./assets/photos/dujiangyan_2.jpg", "./assets/photos/songpan_1.jpg", "./assets/photos/songpan_2.jpg", "./assets/photos/huanglong_1.jpg", "./assets/photos/huanglong_2.jpg", "./assets/photos/huanglong_3.jpg", "./assets/photos/jiuzhaigou_1.jpg", "./assets/photos/jiuzhaigou_2.jpg", "./assets/photos/jiuzhaigou_3.jpg", "./assets/photos/leshan_1.jpg", "./assets/photos/leshan_2.jpg", "./assets/photos/emei_1.jpg", "./assets/photos/emei_2.jpg", "./assets/photos/panda_1.jpg", "./assets/photos/panda_2.jpg", "./assets/photos/panda_entrance.jpg", "./assets/photos/sanxingdui_1.jpg", "./assets/photos/sanxingdui_2.jpg", "./assets/photos/sanxingdui_3.jpg", "./assets/photos/jinli_2.jpg", "./assets/photos/peoples_park_2.jpg", "./assets/photos/kuanzhai_2.jpg", "./assets/photos/huanglong_4.jpg", "./assets/photos/jiuzhaigou_4.jpg", "./assets/photos/leshan_3.jpg", "./assets/photos/panda_3.jpg", "./assets/photos/sanxingdui_4.jpg"];
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);if(u.origin!==location.origin)return;if(e.request.mode==='navigate'){e.respondWith(fetch(e.request).catch(()=>caches.match('./index.html')));return}e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(resp=>{if(resp.ok){const cp=resp.clone();caches.open(CACHE).then(c=>c.put(e.request,cp))}return resp})))});

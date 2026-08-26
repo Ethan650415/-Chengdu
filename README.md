@@ -1,50 +1,18 @@
-# 成都旅伴 v26｜實景照片自動下載版
+# 成都旅伴手冊 Final
 
-此版本修正 v25「上傳後沒有實景圖片」的問題。
+這是乾淨、自包含的 GitHub Pages 版本。
 
-## 上傳後會自動做什麼
+- 已內建 33 張真實 JPG 照片
+- 不包含 SVG 插畫或生成圖
+- 不包含任何 GitHub Actions / 圖片下載 workflow
+- 不依賴 Google
+- 地圖：高德
+- 搜尋：百度
+- 備註：本機 localStorage
+- 圖片來源：`IMAGE_CREDITS.html`
 
-只要把本資料夾完整上傳到 GitHub repository 的 `main` branch：
+## 上傳
+將 ZIP 解壓後的檔案 **直接放在 GitHub repository root**。不要再包一層 `assets/index.html`。
 
-1. GitHub Actions 會自動啟動 `Fetch travel photos`
-2. 透過 Wikimedia Commons API 找到 8 張照片的實際檔案網址
-3. 下載到 `assets/photos/`
-4. 由 `github-actions[bot]` 自動 commit 回 `main`
-5. GitHub Pages 再次部署後，網站就會改用真正照片
-
-不需要手動按 `Run workflow`。
-
-## 你會看到的照片
-
-- 春熙路
-- 成都大熊貓繁育研究基地
-- 九寨溝
-- 黃龍
-- 樂山大佛
-- 峨眉山金頂
-- 三星堆博物館
-- 寬窄巷子
-
-## 如果 Action 出現 push 權限錯誤
-
-到 repository：
-
-`Settings → Actions → General → Workflow permissions`
-
-選：
-
-`Read and write permissions`
-
-儲存後，再到 Actions 頁面重新執行一次 `Fetch travel photos`。
-
-## 如何確認成功
-
-在 repository 裡打開：
-
-`assets/photos/`
-
-應該會看到 8 個 `.jpg`，不再只有 `.gitkeep`。
-
-完整照片來源與授權見 `IMAGE_CREDITS.md`。
-
-20260826
+## 食物圖片說明
+你上傳的 repo 內沒有火鍋、鐘水餃、麻婆豆腐等菜色 JPG，因此本版不再顯示任何自製料理圖，也不冒充菜色。吃喝頁只使用 repo 內已有的真實茶飲與用餐區域實景，並逐卡標示。
