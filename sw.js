@@ -1,10 +1,10 @@
-const CACHE='chengdu-trip-cache';
+const CACHE='chengdu-trip-cache-20260827-places-guide-1';
 const FOOD_CACHE='chengdu-food-photos';
 const ASSETS=[
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
+  "./styles.css?build=20260827-places-guide-1",
+  "./app.js?build=20260827-places-guide-1",
   "./manifest.webmanifest",
   "./IMAGE_CREDITS.html",
   "./assets/photos/chunxi.jpg",
