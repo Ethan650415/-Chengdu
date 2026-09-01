@@ -1,5 +1,5 @@
 const PHOTO_CREDITS = {"chunxi.jpg": {"file": "chunxi.jpg", "caption": "春熙路", "group": "成都", "sourceTitle": "Chunxi Road 20260514-2.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chunxi_Road_20260514-2.jpg", "sourceLabel": "Wikimedia Commons"}, "taikoo.jpg": {"file": "taikoo.jpg", "caption": "成都太古里", "group": "成都", "sourceTitle": "Daci Temple Taikoo Li, Chengdu.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daci_Temple_Taikoo_Li,_Chengdu.jpg", "sourceLabel": "Wikimedia Commons"}, "jinli.jpg": {"file": "jinli.jpg", "caption": "錦里", "group": "成都", "sourceTitle": "ChengduJinli.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:ChengduJinli.jpg", "sourceLabel": "Wikimedia Commons"}, "peoples_park.jpg": {"file": "peoples_park.jpg", "caption": "人民公園茶館", "group": "成都", "sourceTitle": "Teahouse in Peoples Park - Chengdu, China - DSC05348.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Teahouse_in_Peoples_Park_-_Chengdu,_China_-_DSC05348.jpg", "sourceLabel": "Wikimedia Commons"}, "kuanzhai.jpg": {"file": "kuanzhai.jpg", "caption": "寬窄巷子", "group": "成都", "sourceTitle": "Wide and Narrow Alleys, Chengdu (20240905).jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wide_and_Narrow_Alleys,_Chengdu_(20240905).jpg", "sourceLabel": "Wikimedia Commons"}, "dujiangyan_1.jpg": {"file": "dujiangyan_1.jpg", "caption": "都江堰", "group": "川西", "sourceTitle": "Dujiangyan Irrigation System.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dujiangyan_Irrigation_System.jpg", "sourceLabel": "Wikimedia Commons"}, "dujiangyan_2.jpg": {"file": "dujiangyan_2.jpg", "caption": "都江堰水利景觀", "group": "川西", "sourceTitle": "Dujiangyan Scenic Area 36613-Dujiangyan (49068399917).jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dujiangyan_Scenic_Area_36613-Dujiangyan_(49068399917).jpg", "sourceLabel": "Wikimedia Commons"}, "songpan_1.jpg": {"file": "songpan_1.jpg", "caption": "松潘古城", "group": "川西", "sourceTitle": "Songpan Old Town.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Songpan_Old_Town.jpg", "sourceLabel": "Wikimedia Commons"}, "songpan_2.jpg": {"file": "songpan_2.jpg", "caption": "松潘古城", "group": "川西", "sourceTitle": "松潘古城 2024-06-17 03.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E6%BD%98%E5%8F%A4%E5%9F%8E_2024-06-17_03.jpg", "sourceLabel": "Wikimedia Commons"}, "huanglong_1.jpg": {"file": "huanglong_1.jpg", "caption": "黃龍彩池", "group": "黃龍", "sourceTitle": "Huanglonggou Pools.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huanglonggou_Pools.jpg", "sourceLabel": "Wikimedia Commons"}, "huanglong_2.jpg": {"file": "huanglong_2.jpg", "caption": "黃龍鈣華彩池", "group": "黃龍", "sourceTitle": "Huanglong-calcific-ponds.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huanglong-calcific-ponds.jpg", "sourceLabel": "Wikimedia Commons"}, "huanglong_3.jpg": {"file": "huanglong_3.jpg", "caption": "黃龍瀑布", "group": "黃龍", "sourceTitle": "HuanglongWaterfall.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:HuanglongWaterfall.jpg", "sourceLabel": "Wikimedia Commons"}, "jiuzhaigou_1.jpg": {"file": "jiuzhaigou_1.jpg", "caption": "九寨溝・五花海", "group": "九寨溝", "sourceTitle": "九寨溝五花海.JPG", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B9%9D%E5%AF%A8%E6%BA%9D%E4%BA%94%E8%8A%B1%E6%B5%B7.JPG", "sourceLabel": "Wikimedia Commons"}, "jiuzhaigou_2.jpg": {"file": "jiuzhaigou_2.jpg", "caption": "九寨溝・長海", "group": "九寨溝", "sourceTitle": "Long Lake Jiuzhaigou.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Long_Lake_Jiuzhaigou.jpg", "sourceLabel": "Wikimedia Commons"}, "jiuzhaigou_3.jpg": {"file": "jiuzhaigou_3.jpg", "caption": "九寨溝・諾日朗瀑布", "group": "九寨溝", "sourceTitle": "Nuorilang falls.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nuorilang_falls.jpg", "sourceLabel": "Wikimedia Commons"}, "leshan_1.jpg": {"file": "leshan_1.jpg", "caption": "樂山大佛", "group": "樂山峨眉", "sourceTitle": "Leshan Giant Buddha.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha.jpg", "sourceLabel": "Wikimedia Commons"}, "leshan_2.jpg": {"file": "leshan_2.jpg", "caption": "樂山大佛", "group": "樂山峨眉", "sourceTitle": "Leshan Giant Buddha 20260514-8.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_20260514-8.jpg", "sourceLabel": "Wikimedia Commons"}, "emei_1.jpg": {"file": "emei_1.jpg", "caption": "峨眉山金頂", "group": "樂山峨眉", "sourceTitle": "GoldenSummit.JPG", "sourceUrl": "https://commons.wikimedia.org/wiki/File:GoldenSummit.JPG", "sourceLabel": "Wikimedia Commons"}, "emei_2.jpg": {"file": "emei_2.jpg", "caption": "峨眉山", "group": "樂山峨眉", "sourceTitle": "Golden Summit, Mount Emei, China, August 2016.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Golden_Summit,_Mount_Emei,_China,_August_2016.jpg", "sourceLabel": "Wikimedia Commons"}, "panda_1.jpg": {"file": "panda_1.jpg", "caption": "成都熊貓基地", "group": "熊貓三星堆", "sourceTitle": "Giant Panda at Chengdu Panda Base.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giant_Panda_at_Chengdu_Panda_Base.jpg", "sourceLabel": "Wikimedia Commons"}, "panda_2.jpg": {"file": "panda_2.jpg", "caption": "大熊貓", "group": "熊貓三星堆", "sourceTitle": "Chengdu Research Base of Giant Panda Breeding, 201907, 05.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_05.jpg", "sourceLabel": "Wikimedia Commons"}, "panda_entrance.jpg": {"file": "panda_entrance.jpg", "caption": "成都熊貓基地", "group": "熊貓三星堆", "sourceTitle": "Chengdu Research Base of Giant Panda Breeding, 201907, 09.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_09.jpg", "sourceLabel": "Wikimedia Commons"}, "sanxingdui_1.jpg": {"file": "sanxingdui_1.jpg", "caption": "三星堆博物館", "group": "熊貓三星堆", "sourceTitle": "SanXingDui Museum.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:SanXingDui_Museum.jpg", "sourceLabel": "Wikimedia Commons"}, "sanxingdui_2.jpg": {"file": "sanxingdui_2.jpg", "caption": "三星堆博物館", "group": "熊貓三星堆", "sourceTitle": "Sanxingdui Museum 20260512-1.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanxingdui_Museum_20260512-1.jpg", "sourceLabel": "Wikimedia Commons"}, "sanxingdui_3.jpg": {"file": "sanxingdui_3.jpg", "caption": "三星堆文物", "group": "熊貓三星堆", "sourceTitle": "Sanxingdui Museum 20260512-6.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanxingdui_Museum_20260512-6.jpg", "sourceLabel": "Wikimedia Commons"}, "jinli_2.jpg": {"file": "jinli_2.jpg", "caption": "錦里街景", "group": "成都", "sourceTitle": "Jinli Street - Chengdu, China - DSC05399.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jinli_Street_-_Chengdu,_China_-_DSC05399.jpg", "sourceLabel": "Wikimedia Commons"}, "peoples_park_2.jpg": {"file": "peoples_park_2.jpg", "caption": "人民公園蓋碗茶", "group": "成都", "sourceTitle": "Tea in People's Park - Chengdu, China - DSC05362.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tea_in_People%27s_Park_-_Chengdu,_China_-_DSC05362.jpg", "sourceLabel": "Wikimedia Commons"}, "kuanzhai_2.jpg": {"file": "kuanzhai_2.jpg", "caption": "寬窄巷子", "group": "成都", "sourceTitle": "Wide and Narrow Alleys (53691068061).jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wide_and_Narrow_Alleys_(53691068061).jpg", "sourceLabel": "Wikimedia Commons"}, "huanglong_4.jpg": {"file": "huanglong_4.jpg", "caption": "黃龍迎賓池", "group": "黃龍", "sourceTitle": "Welcome-Ponds Huanglong Sichuan China.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Welcome-Ponds_Huanglong_Sichuan_China.jpg", "sourceLabel": "Wikimedia Commons"}, "jiuzhaigou_4.jpg": {"file": "jiuzhaigou_4.jpg", "caption": "九寨溝・長海", "group": "九寨溝", "sourceTitle": "Long Lake (Jiuzhaigou) 20260511-1.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Long_Lake_(Jiuzhaigou)_20260511-1.jpg", "sourceLabel": "Wikimedia Commons"}, "leshan_3.jpg": {"file": "leshan_3.jpg", "caption": "樂山大佛景區", "group": "樂山峨眉", "sourceTitle": "Leshan giant Buddha.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leshan_giant_Buddha.jpg", "sourceLabel": "Wikimedia Commons"}, "panda_3.jpg": {"file": "panda_3.jpg", "caption": "大熊貓", "group": "熊貓三星堆", "sourceTitle": "Chengdu Research Base of Giant Panda Breeding, 201907, 10.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_10.jpg", "sourceLabel": "Wikimedia Commons"}, "sanxingdui_4.jpg": {"file": "sanxingdui_4.jpg", "caption": "三星堆文物", "group": "熊貓三星堆", "sourceTitle": "Sanxingdui Museum 20260512-7.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanxingdui_Museum_20260512-7.jpg", "sourceLabel": "Wikimedia Commons"}};
-const ITINERARY = [{"date": "9/18", "weekday": "Day 1 · 星期五", "title": "抵達成都・春熙路與太古里", "theme": "接機入住，第一晚只排市中心", "photos": ["chunxi.jpg", "taikoo.jpg", "jinli_2.jpg"], "items": [["抵達後", "台灣 → 成都・接機入住", "依實際航班抵達成都後，由旅行社安排接機前往西蜀天际辦理入住。", [["高德｜西蜀天际", "西蜀天际 成都"], ["高德｜成都機場", "成都天府國際機場"]]], ["晚上", "春熙路・太古里", "第一晚以吃飯、散步、熟悉成都為主，不再安排長距離景點。", [["高德｜春熙路", "成都 春熙路"], ["高德｜太古里", "成都 太古里"]]]]}, {"date": "9/19", "weekday": "Day 2 · 星期六", "title": "成都 → 都江堰 → 川主寺", "theme": "正式進入川西段", "photos": ["dujiangyan_1.jpg", "dujiangyan_2.jpg", "songpan_1.jpg"], "items": [["上午", "成都出發", "搭乘 7 座商務車離開成都，開始往川西方向移動。", []], ["途中", "都江堰", "途中停留都江堰，再繼續前往川主寺。", [["高德｜都江堰", "都江堰景區"]]], ["晚上", "川主寺住宿", "抵達川主寺休息，準備隔天黃龍一日遊；酒店目前待定。", [["高德｜川主寺", "川主寺鎮"]]]]}, {"date": "9/20", "weekday": "Day 3 · 星期日", "title": "黃龍一日遊 → 九寨溝口", "theme": "索道上行＋五彩池", "photos": ["huanglong_1.jpg", "huanglong_2.jpg", "huanglong_3.jpg", "huanglong_4.jpg"], "items": [["上午", "前往黃龍景區", "由川主寺前往黃龍，整天留給黃龍景區。", [["高德｜黃龍", "黃龍風景名勝區"]]], ["景區內", "索道上行・五彩池", "依旅行社版本，以上行索道與景區交通前往五彩池為主。", [["百度｜黃龍五彩池", "黃龍 五彩池"]]], ["傍晚", "前往九寨溝口", "黃龍結束後移動至九寨溝溝口住宿；酒店目前待定。", [["高德｜九寨溝", "九寨溝風景名勝區"]]]]}, {"date": "9/21", "weekday": "Day 4 · 星期一", "title": "九寨溝全天 → 松潘古城", "theme": "景區觀光車為主", "photos": ["jiuzhaigou_1.jpg", "jiuzhaigou_2.jpg", "jiuzhaigou_3.jpg", "jiuzhaigou_4.jpg", "songpan_2.jpg"], "items": [["全天", "九寨溝一日遊", "完整留給九寨溝，景區內以觀光車搭配步行；實際海子順序依當天景區安排。", [["高德｜九寨溝", "九寨溝風景名勝區"]]], ["傍晚", "九寨溝 → 松潘古城", "完成九寨溝後前往松潘古城住宿；酒店目前待定。", [["高德｜松潘古城", "松潘古城"]]]]}, {"date": "9/22", "weekday": "Day 5 · 星期二", "title": "松潘返回成都・休息半日", "theme": "奎星樓街或按摩休息", "photos": ["songpan_1.jpg", "songpan_2.jpg", "chunxi.jpg"], "items": [["上午", "松潘 → 成都", "返回成都，結束川西段；今晚入住豪阔遇上酒店。", [["高德｜豪阔遇上酒店", "豪阔遇上酒店 成都"]]], ["下午", "奎星樓街／按摩", "依抵達時間與體力選擇逛奎星樓街，或直接按摩與休息。", [["高德｜奎星樓街", "成都 奎星樓街"]]]]}, {"date": "9/23", "weekday": "Day 6 · 星期三", "title": "成都 → 樂山大佛 → 峨眉山", "theme": "樂山採遊船路線", "photos": ["leshan_1.jpg", "leshan_2.jpg", "leshan_3.jpg", "emei_2.jpg"], "items": [["上午", "樂山大佛遊船", "由成都前往樂山，以遊船方式觀看大佛。", [["高德｜樂山大佛", "樂山大佛"]]], ["中午", "樂山市區午餐", "看完大佛後在樂山市區用餐，再往峨眉山。", [["百度｜樂山美食", "樂山 美食 推薦"]]], ["下午", "峨眉山報國寺區域・入住酒店", "下午前往峨眉山報國寺區域，入住柏隐汤泉智能酒店。", [["高德｜柏隐汤泉智能酒店", "柏隐汤泉智能酒店 峨眉山"], ["高德｜報國寺", "峨眉山 報國寺"]]]]}, {"date": "9/24", "weekday": "Day 7 · 星期四", "title": "峨眉山金頂一日遊 → 成都・撫琴夜市", "theme": "觀光車＋索道為主／晚上逛夜市", "photos": ["emei_1.jpg", "emei_2.jpg"], "items": [["全天", "峨眉山金頂", "以景區觀光車與索道為主要移動方式，完成金頂行程。", [["高德｜峨眉山金頂", "峨眉山 金頂"]]], ["傍晚", "返回成都", "下山後返回成都，入住豪阔遇上酒店。", [["高德｜豪阔遇上酒店", "豪阔遇上酒店 成都"]]], ["晚上", "撫琴夜市", "晚上前往撫琴夜市，作為下山回成都後的輕鬆逛吃行程。", [["高德｜撫琴夜市", "成都 抚琴夜市"]]]]}, {"date": "9/25", "weekday": "Day 8 · 星期五", "title": "熊貓基地 → 青城山／三星堆擇一 → 錦里", "theme": "熊貓最早時段＋下午二選一", "photos": ["panda_1.jpg", "panda_2.jpg", "panda_entrance.jpg", "panda_3.jpg", "sanxingdui_1.jpg", "sanxingdui_2.jpg", "sanxingdui_3.jpg", "sanxingdui_4.jpg", "jinli.jpg"], "items": [["最早時段", "成都大熊貓繁育研究基地", "旅行社特別安排最早時段，上午先看熊貓。", [["高德｜熊貓基地", "成都大熊貓繁育研究基地"]]], ["下午", "青城山／三星堆博物館擇一", "下午由青城山與三星堆博物館兩個方案中擇一，實際安排依出發前確認為準。", [["高德｜青城山", "青城山風景區"], ["高德｜三星堆", "三星堆博物館"]]], ["晚上", "錦里古街", "回成都後安排錦里夜間散步與小吃，今晚入住豪阔遇上酒店。", [["高德｜錦里", "成都 錦里古街"], ["高德｜豪阔遇上酒店", "豪阔遇上酒店 成都"]]]]}, {"date": "9/26", "weekday": "Day 9 · 星期六", "title": "成都慢生活・人民公園・寬窄巷子", "theme": "喝茶＋自由活動＋川劇", "photos": ["peoples_park.jpg", "peoples_park_2.jpg", "kuanzhai.jpg", "kuanzhai_2.jpg", "jinli_2.jpg"], "items": [["上午", "人民公園・喝茶", "最後一個完整旅行日刻意放慢，先在人民公園坐下喝茶。", [["高德｜人民公園", "成都 人民公園"]]], ["下午", "寬窄巷子・自由活動", "下午安排寬窄巷子，並補前幾天沒完成的採買與小吃。", [["高德｜寬窄巷子", "成都 寬窄巷子"]]], ["晚上", "川劇變臉", "最後一晚安排川劇變臉，場次與劇場之後再補；今晚仍入住豪阔遇上酒店。", [["百度｜川劇場次", "成都 川劇 變臉 表演"]]]]}, {"date": "9/27", "weekday": "Day 10 · 星期日", "title": "成都返程・分兩次送機", "theme": "兩組航班時間待補", "photos": ["taikoo.jpg", "chunxi.jpg"], "items": [["上午", "自由活動・整理行李", "依各自航班時間安排最後採買與行李整理。", []], ["Flight 01", "第一批送機", "旅行社確認分兩次送機；第一組航班時間與機場待補。", []], ["Flight 02", "第二批送機", "第二組航班時間與機場待補。", []]]}];
+const ITINERARY = [{"date": "9/18", "weekday": "Day 1 · 星期五", "title": "抵達成都・春熙路與太古里", "theme": "接機入住，第一晚只排市中心", "photos": ["chunxi.jpg", "taikoo.jpg", "jinli_2.jpg"], "items": [["抵達後", "台灣 → 成都・接機入住", "依實際航班抵達成都後，由旅行社安排接機前往西蜀天际辦理入住。", [["高德｜西蜀天际", "西蜀天际 成都"], ["高德｜成都機場", "成都天府國際機場"]]], ["晚上", "春熙路・太古里", "第一晚以吃飯、散步、熟悉成都為主，不再安排長距離景點。", [["高德｜春熙路", "成都 春熙路"], ["高德｜太古里", "成都 太古里"]]]]}, {"date": "9/19", "weekday": "Day 2 · 星期六", "title": "成都 → 都江堰 → 川主寺", "theme": "正式進入川西段", "photos": ["dujiangyan_1.jpg", "dujiangyan_2.jpg", "songpan_1.jpg"], "items": [["上午", "成都出發", "搭乘 7 座商務車離開成都，開始往川西方向移動。", []], ["途中", "都江堰", "途中停留都江堰，再繼續前往川主寺。", [["高德｜都江堰", "都江堰景區"]]], ["晚上", "川主寺住宿", "抵達川主寺休息，準備隔天黃龍一日遊；酒店目前待定。", [["高德｜川主寺", "川主寺鎮"]]]]}, {"date": "9/20", "weekday": "Day 3 · 星期日", "title": "黃龍一日遊 → 九寨溝口", "theme": "索道上行＋五彩池", "photos": ["huanglong_1.jpg", "huanglong_2.jpg", "huanglong_3.jpg", "huanglong_4.jpg"], "items": [["上午", "前往黃龍景區", "由川主寺前往黃龍，整天留給黃龍景區。", [["高德｜黃龍", "黃龍風景名勝區"]]], ["景區內", "索道上行・五彩池", "依旅行社安排，以上行索道與景區交通前往五彩池為主。", [["百度｜黃龍五彩池", "黃龍 五彩池"]]], ["傍晚", "前往九寨溝口", "黃龍結束後移動至九寨溝溝口住宿；酒店目前待定。", [["高德｜九寨溝", "九寨溝風景名勝區"]]]]}, {"date": "9/21", "weekday": "Day 4 · 星期一", "title": "九寨溝全天 → 松潘古城", "theme": "景區觀光車為主", "photos": ["jiuzhaigou_1.jpg", "jiuzhaigou_2.jpg", "jiuzhaigou_3.jpg", "jiuzhaigou_4.jpg", "songpan_2.jpg"], "items": [["全天", "九寨溝一日遊", "完整留給九寨溝，景區內以觀光車搭配步行；實際海子順序依當天景區安排。", [["高德｜九寨溝", "九寨溝風景名勝區"]]], ["傍晚", "九寨溝 → 松潘古城", "完成九寨溝後前往松潘古城住宿；酒店目前待定。", [["高德｜松潘古城", "松潘古城"]]]]}, {"date": "9/22", "weekday": "Day 5 · 星期二", "title": "松潘返回成都・休息半日", "theme": "奎星樓街或按摩休息", "photos": ["songpan_1.jpg", "songpan_2.jpg", "chunxi.jpg"], "items": [["上午", "松潘 → 成都", "返回成都，結束川西段；今晚入住豪阔遇上酒店。", [["高德｜豪阔遇上酒店", "豪阔遇上酒店 成都"]]], ["下午", "奎星樓街／按摩", "依抵達時間與體力選擇逛奎星樓街，或直接按摩與休息。", [["高德｜奎星樓街", "成都 奎星樓街"]]]]}, {"date": "9/23", "weekday": "Day 6 · 星期三", "title": "成都 → 樂山大佛 → 峨眉山", "theme": "樂山採遊船路線", "photos": ["leshan_1.jpg", "leshan_2.jpg", "leshan_3.jpg", "emei_2.jpg"], "items": [["上午", "樂山大佛遊船", "由成都前往樂山，以遊船方式觀看大佛。", [["高德｜樂山大佛", "樂山大佛"]]], ["中午", "樂山市區午餐", "看完大佛後在樂山市區用餐，再往峨眉山。", [["百度｜樂山美食", "樂山 美食 推薦"]]], ["下午", "峨眉山報國寺區域・入住酒店", "下午前往峨眉山報國寺區域，入住柏隐汤泉智能酒店。", [["高德｜柏隐汤泉智能酒店", "柏隐汤泉智能酒店 峨眉山"], ["高德｜報國寺", "峨眉山 報國寺"]]]]}, {"date": "9/24", "weekday": "Day 7 · 星期四", "title": "峨眉山金頂一日遊 → 成都・撫琴夜市", "theme": "觀光車＋索道為主／晚上逛夜市", "photos": ["emei_1.jpg", "emei_2.jpg"], "items": [["全天", "峨眉山金頂", "以景區觀光車與索道為主要移動方式，完成金頂行程。", [["高德｜峨眉山金頂", "峨眉山 金頂"]]], ["傍晚", "返回成都", "下山後返回成都，入住豪阔遇上酒店。", [["高德｜豪阔遇上酒店", "豪阔遇上酒店 成都"]]], ["晚上", "撫琴夜市", "晚上前往撫琴夜市，作為下山回成都後的輕鬆逛吃行程。", [["高德｜撫琴夜市", "成都 抚琴夜市"]]]]}, {"date": "9/25", "weekday": "Day 8 · 星期五", "title": "熊貓基地 → 青城山／三星堆擇一 → 錦里", "theme": "熊貓最早時段＋下午二選一", "photos": ["panda_1.jpg", "panda_2.jpg", "panda_entrance.jpg", "panda_3.jpg", "sanxingdui_1.jpg", "sanxingdui_2.jpg", "sanxingdui_3.jpg", "sanxingdui_4.jpg", "jinli.jpg"], "items": [["最早時段", "成都大熊貓繁育研究基地", "旅行社特別安排最早時段，上午先看熊貓。", [["高德｜熊貓基地", "成都大熊貓繁育研究基地"]]], ["下午", "青城山／三星堆博物館擇一", "下午由青城山與三星堆博物館兩個方案中擇一，實際安排依出發前確認為準。", [["高德｜青城山", "青城山風景區"], ["高德｜三星堆", "三星堆博物館"]]], ["晚上", "錦里古街", "回成都後安排錦里夜間散步與小吃，今晚入住豪阔遇上酒店。", [["高德｜錦里", "成都 錦里古街"], ["高德｜豪阔遇上酒店", "豪阔遇上酒店 成都"]]]]}, {"date": "9/26", "weekday": "Day 9 · 星期六", "title": "成都慢生活・人民公園・寬窄巷子", "theme": "喝茶＋自由活動＋川劇", "photos": ["peoples_park.jpg", "peoples_park_2.jpg", "kuanzhai.jpg", "kuanzhai_2.jpg", "jinli_2.jpg"], "items": [["上午", "人民公園・喝茶", "最後一個完整旅行日刻意放慢，先在人民公園坐下喝茶。", [["高德｜人民公園", "成都 人民公園"]]], ["下午", "寬窄巷子・自由活動", "下午安排寬窄巷子，並補前幾天沒完成的採買與小吃。", [["高德｜寬窄巷子", "成都 寬窄巷子"]]], ["晚上", "川劇變臉", "最後一晚安排川劇變臉，場次與劇場之後再補；今晚仍入住豪阔遇上酒店。", [["百度｜川劇場次", "成都 川劇 變臉 表演"]]]]}, {"date": "9/27", "weekday": "Day 10 · 星期日", "title": "成都返程・分兩次送機", "theme": "兩組航班時間待補", "photos": ["taikoo.jpg", "chunxi.jpg"], "items": [["上午", "自由活動・整理行李", "依各自航班時間安排最後採買與行李整理。", []], ["Flight 01", "第一批送機", "旅行社確認分兩次送機；第一組航班時間與機場待補。", []], ["Flight 02", "第二批送機", "第二組航班時間與機場待補。", []]]}];
 const PLACES = [["春熙路", "成都", "市中心", "chunxi.jpg", "抵達第一晚的市區散步主軸，可和太古里一起走。", "成都 春熙路"], ["成都太古里", "成都", "市中心", "taikoo.jpg", "第一晚適合吃飯、散步與逛街。", "成都 太古里"], ["都江堰", "川西", "都江堰", "dujiangyan_1.jpg", "9/19 前往川主寺途中停留。", "都江堰景區"], ["黃龍", "川西", "黃龍", "huanglong_1.jpg", "9/20 全天核心景區，以彩池與鈣華地貌為重點。", "黃龍風景名勝區"], ["九寨溝", "川西", "九寨溝", "jiuzhaigou_1.jpg", "9/21 完整一日，觀光車搭配步行。", "九寨溝風景名勝區"], ["松潘古城", "川西", "松潘", "songpan_1.jpg", "九寨溝結束後住宿，隔天返回成都。", "松潘古城"], ["樂山大佛", "樂山峨眉", "樂山", "leshan_1.jpg", "9/23 採遊船路線觀看大佛。", "樂山大佛"], ["峨眉山金頂", "樂山峨眉", "峨眉山", "emei_1.jpg", "9/24 一日遊核心。", "峨眉山 金頂"], ["成都熊貓基地", "成都", "成華區", "panda_2.jpg", "9/25 上午安排最早時段。", "成都大熊貓繁育研究基地"], ["三星堆博物館", "人文", "廣漢", "sanxingdui_2.jpg", "9/25 下午文化重點。", "三星堆博物館"], ["錦里古街", "成都", "武侯區", "jinli_2.jpg", "9/25 晚上散步與小吃。", "成都 錦里古街"], ["人民公園", "成都", "青羊區", "peoples_park.jpg", "9/26 成都慢生活與喝茶。", "成都 人民公園"], ["寬窄巷子", "成都", "青羊區", "kuanzhai_2.jpg", "9/26 下午自由活動與採買。", "成都 寬窄巷子"]];
 const HOTELS = [{"date": "9/18", "area": "成都", "name": "西蜀天际", "status": "已確認", "query": "西蜀天际 成都"}, {"date": "9/19", "area": "川主寺", "name": "待定", "status": "待確認", "query": ""}, {"date": "9/20", "area": "九寨溝口", "name": "待定", "status": "待確認", "query": ""}, {"date": "9/21", "area": "松潘古城", "name": "待定", "status": "待確認", "query": ""}, {"date": "9/22", "area": "成都", "name": "豪阔遇上酒店", "status": "已確認", "query": "豪阔遇上酒店 成都"}, {"date": "9/23", "area": "峨眉", "name": "柏隐汤泉智能酒店", "status": "已確認", "query": "柏隐汤泉智能酒店 峨眉山"}, {"date": "9/24", "area": "成都", "name": "豪阔遇上酒店", "status": "已確認", "query": "豪阔遇上酒店 成都"}, {"date": "9/25", "area": "成都", "name": "豪阔遇上酒店", "status": "已確認", "query": "豪阔遇上酒店 成都"}, {"date": "9/26", "area": "成都", "name": "豪阔遇上酒店", "status": "已確認", "query": "豪阔遇上酒店 成都"}, {"date": "9/27", "area": "返程", "name": "不住宿", "status": "返程日", "query": ""}];
 const DAY_FOOD = {
@@ -98,104 +98,92 @@ const views = [...document.querySelectorAll('.view')];
 tabs.forEach(tab => tab.addEventListener('click', () => {
   tabs.forEach(x=>x.classList.remove('is-active')); views.forEach(x=>x.classList.remove('is-visible'));
   tab.classList.add('is-active'); document.getElementById(tab.dataset.view)?.classList.add('is-visible');
+  if (tab.dataset.view === 'tempo') renderTempo();
   if (innerWidth < 820) scrollTo({top:0,behavior:'smooth'});
 }));
 
 
-function cuteRouteMap() {
+const MAP_POINTS = {"chengdu": {"name": "成都", "x": 500, "y": 430, "days": "D1・D5・D8・D9・D10", "region": "city", "labelX": 535, "labelY": 430}, "dujiangyan": {"name": "都江堰", "x": 330, "y": 355, "days": "D2", "region": "west", "labelX": 185, "labelY": 350}, "qingcheng": {"name": "青城山", "x": 300, "y": 410, "days": "D8 擇一", "region": "option", "labelX": 145, "labelY": 430}, "sanxingdui": {"name": "三星堆", "x": 635, "y": 350, "days": "D8 擇一", "region": "option", "labelX": 675, "labelY": 335}, "chuanzhusi": {"name": "川主寺", "x": 360, "y": 150, "days": "D2 夜宿", "region": "west", "labelX": 180, "labelY": 130}, "huanglong": {"name": "黃龍", "x": 475, "y": 180, "days": "D3", "region": "west", "labelX": 510, "labelY": 165}, "jiuzhaigou": {"name": "九寨溝", "x": 610, "y": 85, "days": "D3 夜宿・D4", "region": "west", "labelX": 650, "labelY": 70}, "songpan": {"name": "松潘", "x": 350, "y": 235, "days": "D4 夜宿", "region": "west", "labelX": 190, "labelY": 225}, "leshan": {"name": "樂山", "x": 480, "y": 575, "days": "D6", "region": "south", "labelX": 520, "labelY": 570}, "emei": {"name": "峨眉山", "x": 365, "y": 640, "days": "D6 夜宿・D7", "region": "south", "labelX": 190, "labelY": 625}};
+const MAP_ROUTES = [{"name": "川西段", "className": "route-west", "points": ["chengdu", "dujiangyan", "chuanzhusi", "huanglong", "jiuzhaigou", "songpan", "chengdu"]}, {"name": "樂山峨眉段", "className": "route-south", "points": ["chengdu", "leshan", "emei", "chengdu"]}, {"name": "下午擇一", "className": "route-option", "points": ["chengdu", "qingcheng"]}, {"name": "下午擇一", "className": "route-option", "points": ["chengdu", "sanxingdui"]}];
+
+function routeSegmentLines(route) {
+  return route.points.slice(0, -1).map((key, index) => {
+    const a = MAP_POINTS[key];
+    const b = MAP_POINTS[route.points[index + 1]];
+    return `<line class="map-route ${route.className}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" marker-end="url(#arrow-${route.className})" />`;
+  }).join('');
+}
+
+function routePointMarker(key) {
+  const p = MAP_POINTS[key];
+  const palette = {
+    city: ['#173d36', '#fff8e9'],
+    west: ['#3f8f82', '#effaf6'],
+    south: ['#c27a3d', '#fff7e9'],
+    option: ['#8062bd', '#f6f0ff'],
+  }[p.region];
+  const boxWidth = key === 'chengdu' ? 155 : 130;
+  const boxX = p.labelX;
+  const boxY = p.labelY - 24;
+  const connectX = boxX > p.x ? boxX : boxX + boxWidth;
+  return `<g class="map-point map-point-${p.region}">
+    <line class="map-label-line" x1="${p.x}" y1="${p.y}" x2="${connectX}" y2="${p.labelY}" />
+    <circle cx="${p.x}" cy="${p.y}" r="17" fill="${palette[1]}" stroke="${palette[0]}" stroke-width="5" />
+    <circle cx="${p.x}" cy="${p.y}" r="6" fill="${palette[0]}" />
+    <rect x="${boxX}" y="${boxY}" width="${boxWidth}" height="49" rx="13" fill="#fffdf7" stroke="${palette[0]}" stroke-width="2" />
+    <text x="${boxX + 12}" y="${boxY + 20}" font-size="17" font-weight="850" fill="#173d36">${p.name}</text>
+    <text x="${boxX + 12}" y="${boxY + 39}" font-size="11.5" font-weight="700" fill="#68716c">${p.days}</text>
+  </g>`;
+}
+
+function routeMapSvg() {
   return `<div class="route-map-shell">
-    <svg class="route-map" viewBox="0 0 900 620" role="img" aria-label="四川成都之旅行程 Q 版路線圖">
-      <defs>
-        <linearGradient id="bgwash" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#fffaf0"/><stop offset="100%" stop-color="#f6efe1"/></linearGradient>
-        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#173d36" flood-opacity=".12"/></filter>
-      </defs>
-      <rect x="0" y="0" width="900" height="620" rx="28" fill="url(#bgwash)"/>
-      <path d="M120 90 C210 40, 360 50, 470 120 S720 180, 790 140 L820 220 C760 255, 735 310, 744 378 C754 457, 685 537, 550 552 C414 566, 302 534, 206 482 C121 436, 72 349, 82 253 C89 182, 82 117, 120 90Z" fill="#e9ddc2" opacity="0.82"/>
-      <path d="M108 252 C203 198, 302 148, 396 122 C452 106, 530 97, 609 112" fill="none" stroke="#9eb7a7" stroke-width="16" stroke-linecap="round" opacity="0.55"/>
-      <path d="M492 388 C431 354, 367 340, 292 342 C247 343, 188 354, 135 391" fill="none" stroke="#9eb7a7" stroke-width="16" stroke-linecap="round" opacity="0.55"/>
-      <path d="M340 153 C356 194, 383 214, 413 238" fill="none" stroke="#8ad1e0" stroke-width="12" stroke-linecap="round" opacity="0.75"/>
-      <path d="M460 258 C492 245, 548 241, 604 256" fill="none" stroke="#8ad1e0" stroke-width="12" stroke-linecap="round" opacity="0.75"/>
-
-      <polyline points="612,402 502,340 418,270 402,222 432,202 470,184 525,178" fill="none" stroke="#a94235" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 12"/>
-      <polyline points="612,402 552,442 525,485" fill="none" stroke="#a94235" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 12"/>
-      <polyline points="612,402 686,382" fill="none" stroke="#a94235" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 12"/>
-      <polyline points="612,402 590,334" fill="none" stroke="#a94235" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 12"/>
-
-      <g filter="url(#shadow)">
-        <g transform="translate(0 0)">
-          <circle cx="612" cy="402" r="38" fill="#173d36"/>
-          <circle cx="612" cy="402" r="30" fill="#fff7e9"/>
-          <path d="M595 380 q-8 -20 11 -25 q12 1 15 13 q11 -6 21 2 q5 11 -1 22 q10 6 6 18 q-7 11 -20 7 q-2 15 -17 17 q-14 -1 -18 -14 q-14 4 -22 -7 q-2 -12 7 -20 q-6 -5 -6 -13 q2 -10 11 -12 q5 -1 13 4Z" fill="#2f403a" opacity="0.95"/>
-          <path d="M603 404 q9 -8 18 0" stroke="#2f403a" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <circle cx="605" cy="396" r="3.6" fill="#2f403a"/>
-          <circle cx="621" cy="396" r="3.6" fill="#2f403a"/>
-          <circle cx="613" cy="402" r="2.8" fill="#a94235"/>
-          <text x="612" y="452" text-anchor="middle" font-size="24" font-weight="800" fill="#173d36">成都</text>
-          <text x="612" y="474" text-anchor="middle" font-size="13" fill="#6a726c">D1 · D5 · D8 · D9 · D10</text>
+    <div class="map-swipe-hint">左右滑動可查看完整路線</div>
+    <div class="route-map-scroll">
+      <svg class="route-map" viewBox="0 0 960 720" role="img" aria-label="四川行程路線位置圖，相對位置示意">
+        <defs>
+          <linearGradient id="map-paper" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#fffdf7"/><stop offset="100%" stop-color="#f3ead8"/></linearGradient>
+          <marker id="arrow-route-west" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#3f8f82"/></marker>
+          <marker id="arrow-route-south" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c27a3d"/></marker>
+          <marker id="arrow-route-option" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#8062bd"/></marker>
+          <marker id="arrow-north" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#173d36"/></marker>
+          <filter id="map-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#173d36" flood-opacity=".11"/></filter>
+        </defs>
+        <rect width="960" height="720" rx="28" fill="url(#map-paper)" />
+        <g class="map-region map-region-west">
+          <path d="M90 42 C225 20 500 25 700 65 C725 135 690 250 615 310 C520 355 330 330 155 290 C95 220 75 125 90 42Z" fill="#e5f3ed" />
+          <text x="108" y="78" font-size="20" font-weight="850" fill="#3f796f">川西高原</text>
+          <text x="108" y="100" font-size="12" fill="#65877f">第 2–4 天主要移動區</text>
+          <g fill="#b8d1c3" opacity=".82"><path d="M130 185 l34 -60 34 60z"/><path d="M185 180 l43 -75 43 75z"/><path d="M247 193 l32 -57 32 57z"/></g>
         </g>
-
-        <g transform="translate(490 312)">
-          <circle cx="0" cy="0" r="27" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <path d="M-17 15 L-7 -9 L4 8 L13 -17 L18 15 Z" fill="#7fbf7f" stroke="#4b7b4b" stroke-width="3" stroke-linejoin="round"/>
-          <text x="0" y="52" text-anchor="middle" font-size="18" font-weight="800" fill="#173d36">都江堰</text>
-          <text x="0" y="70" text-anchor="middle" font-size="12" fill="#6a726c">D2 上午</text>
+        <g class="map-region map-region-plain">
+          <path d="M250 320 C365 285 665 285 790 345 C815 410 790 500 710 535 C570 555 355 530 245 470 C220 410 225 350 250 320Z" fill="#f2ead8" />
+          <text x="720" y="505" font-size="18" font-weight="850" fill="#8a7654">成都平原</text>
         </g>
-        <g transform="translate(412 260)">
-          <circle cx="0" cy="0" r="24" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <path d="M-11 16 L0 -15 L11 16 Z" fill="#99d5ff" stroke="#4f7ea5" stroke-width="3"/>
-          <text x="0" y="48" text-anchor="middle" font-size="17" font-weight="800" fill="#173d36">川主寺</text>
-          <text x="0" y="66" text-anchor="middle" font-size="12" fill="#6a726c">D2 夜宿</text>
+        <g class="map-region map-region-south">
+          <path d="M250 520 C390 500 630 520 710 610 C665 685 505 705 305 675 C255 640 235 580 250 520Z" fill="#faecd8" />
+          <text x="690" y="650" font-size="18" font-weight="850" fill="#a66b35">川南</text>
         </g>
-        <g transform="translate(394 216)">
-          <circle cx="0" cy="0" r="24" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <path d="M-13 4 C-7 -12, 8 -15, 16 -2 C10 10, -3 17, -14 14 Z" fill="#80d7b5" stroke="#4d9a7f" stroke-width="3"/>
-          <text x="0" y="48" text-anchor="middle" font-size="17" font-weight="800" fill="#173d36">黃龍</text>
-          <text x="0" y="66" text-anchor="middle" font-size="12" fill="#6a726c">D3</text>
+        <g class="cardinal-axis" aria-hidden="true">
+          <line x1="870" y1="96" x2="870" y2="40" stroke="#173d36" stroke-width="4" marker-end="url(#arrow-north)" />
+          <text x="870" y="26" text-anchor="middle" font-size="17" font-weight="900" fill="#173d36">北</text>
+          <text x="42" y="382" font-size="16" font-weight="800" fill="#7a817d">西 ←</text>
+          <text x="918" y="382" text-anchor="end" font-size="16" font-weight="800" fill="#7a817d">→ 東</text>
+          <text x="870" y="694" text-anchor="middle" font-size="16" font-weight="800" fill="#7a817d">南 ↓</text>
         </g>
-        <g transform="translate(432 194)">
-          <circle cx="0" cy="0" r="24" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <path d="M-14 12 C-16 -4, -5 -15, 8 -12 C16 -7, 17 5, 6 13 C0 18, -10 17, -14 12 Z" fill="#8ad1e0" stroke="#4f9ab0" stroke-width="3"/>
-          <text x="0" y="48" text-anchor="middle" font-size="17" font-weight="800" fill="#173d36">九寨溝</text>
-          <text x="0" y="66" text-anchor="middle" font-size="12" fill="#6a726c">D3 夜宿・D4</text>
-        </g>
-        <g transform="translate(472 176)">
-          <circle cx="0" cy="0" r="24" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <rect x="-12" y="-10" width="24" height="18" rx="3" fill="#c3b18e" stroke="#8c7855" stroke-width="3"/>
-          <text x="0" y="48" text-anchor="middle" font-size="17" font-weight="800" fill="#173d36">松潘</text>
-          <text x="0" y="66" text-anchor="middle" font-size="12" fill="#6a726c">D4 夜宿</text>
-        </g>
-        <g transform="translate(524 482)">
-          <circle cx="0" cy="0" r="24" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <path d="M-14 10 C-8 -5, 1 -15, 14 -13 C11 -2, 8 7, -2 15 Z" fill="#f0c86b" stroke="#b28933" stroke-width="3"/>
-          <text x="0" y="48" text-anchor="middle" font-size="17" font-weight="800" fill="#173d36">樂山</text>
-          <text x="0" y="66" text-anchor="middle" font-size="12" fill="#6a726c">D6</text>
-        </g>
-        <g transform="translate(552 442)">
-          <circle cx="0" cy="0" r="24" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <path d="M-10 15 L0 -13 L10 15 Z" fill="#d8c6ff" stroke="#8b72c2" stroke-width="3"/>
-          <text x="0" y="48" text-anchor="middle" font-size="17" font-weight="800" fill="#173d36">峨眉山</text>
-          <text x="0" y="66" text-anchor="middle" font-size="12" fill="#6a726c">D6 夜宿・D7</text>
-        </g>
-        <g transform="translate(592 332)">
-          <circle cx="0" cy="0" r="22" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <path d="M-10 6 Q0 -12 10 6" fill="none" stroke="#4b7b4b" stroke-width="4" stroke-linecap="round"/>
-          <path d="M-5 14 Q0 4 5 14" fill="none" stroke="#4b7b4b" stroke-width="4" stroke-linecap="round"/>
-          <text x="0" y="46" text-anchor="middle" font-size="16" font-weight="800" fill="#173d36">青城山</text>
-          <text x="0" y="64" text-anchor="middle" font-size="12" fill="#6a726c">D8 備選</text>
-        </g>
-        <g transform="translate(686 382)">
-          <circle cx="0" cy="0" r="22" fill="#fff" stroke="#173d36" stroke-width="4"/>
-          <path d="M-9 -8 L0 -14 L9 -8 L5 10 L-5 10 Z" fill="#e4b26a" stroke="#9b6e2e" stroke-width="3"/>
-          <text x="0" y="46" text-anchor="middle" font-size="16" font-weight="800" fill="#173d36">三星堆</text>
-          <text x="0" y="64" text-anchor="middle" font-size="12" fill="#6a726c">D8 備選</text>
-        </g>
-      </g>
-    </svg>
+        <g class="map-routes">${MAP_ROUTES.map(routeSegmentLines).join('')}</g>
+        <g class="route-label route-label-west"><rect x="270" y="274" width="102" height="30" rx="15"/><text x="321" y="294" text-anchor="middle">川西段</text></g>
+        <g class="route-label route-label-south"><rect x="505" y="515" width="122" height="30" rx="15"/><text x="566" y="535" text-anchor="middle">樂山峨眉段</text></g>
+        <g class="route-label route-label-option"><rect x="588" y="393" width="106" height="30" rx="15"/><text x="641" y="413" text-anchor="middle">下午擇一</text></g>
+        <g filter="url(#map-shadow)">${Object.keys(MAP_POINTS).map(routePointMarker).join('')}</g>
+      </svg>
+    </div>
     <div class="map-legend">
       <span><i class="dot dot-city"></i> 成都住宿中心</span>
-      <span><i class="dot dot-west"></i> 川西自然景觀</span>
-      <span><i class="dot dot-south"></i> 樂山峨眉</span>
-      <span><i class="dot dot-alt"></i> D8 下午擇一</span>
+      <span><i class="dot dot-west"></i> 川西段</span>
+      <span><i class="dot dot-south"></i> 樂山峨眉段</span>
+      <span><i class="dot dot-alt"></i> 第 8 天下午擇一</span>
+      <span class="map-scale-note">相對位置示意，非比例尺</span>
     </div>
   </div>`;
 }
@@ -212,7 +200,11 @@ function renderTempo() {
       </tbody></table></div>
     </article>
   `).join('');
-  routeMap.innerHTML = cuteRouteMap();
+  routeMap.innerHTML = routeMapSvg();
+  requestAnimationFrame(() => {
+    const scroller = routeMap.querySelector('.route-map-scroll');
+    if (scroller && innerWidth < 560) scroller.scrollLeft = Math.min(190, scroller.scrollWidth - scroller.clientWidth);
+  });
 }
 
 let selectedDay = 0;
@@ -293,7 +285,7 @@ const NOTES_KEY='chengdu-trip-notes';
 const noteForm=document.getElementById('noteForm'), noteList=document.getElementById('noteList');
 function getNotes(){try{return JSON.parse(localStorage.getItem(NOTES_KEY)||'[]')}catch{return[]}}
 function setNotes(v){localStorage.setItem(NOTES_KEY,JSON.stringify(v))}
-function renderNotes(){const n=getNotes();document.getElementById('notesStatus').textContent='本機離線模式：備註只存在這台裝置。';noteList.innerHTML=n.length?n.map(x=>`<article class="note-card"><h4>${esc(x.title)}</h4><p>${esc(x.body)}</p><button data-id="${esc(x.id)}">刪除</button></article>`).join(''):'<article class="note-card"><h4>尚無備註</h4><p>可記錄航班、門票、餐廳、分工與購物清單。</p></article>';}
+function renderNotes(){const n=getNotes();document.getElementById('notesStatus').textContent='備註只會保存在目前使用的手機。';noteList.innerHTML=n.length?n.map(x=>`<article class="note-card"><h4>${esc(x.title)}</h4><p>${esc(x.body)}</p><button data-id="${esc(x.id)}">刪除</button></article>`).join(''):'<article class="note-card"><h4>尚無備註</h4><p>可記錄航班、門票、餐廳、分工與購物清單。</p></article>';}
 noteForm.addEventListener('submit',e=>{e.preventDefault();const fd=new FormData(noteForm),n=getNotes();n.unshift({id:crypto.randomUUID?.()||Date.now().toString(),title:String(fd.get('title')).trim(),body:String(fd.get('body')).trim()});setNotes(n);noteForm.reset();renderNotes();});
 noteList.addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(!b)return;setNotes(getNotes().filter(x=>x.id!==b.dataset.id));renderNotes();});
 
