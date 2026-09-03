@@ -1,6 +1,7 @@
 const CACHE='chengdu-trip-route-map-20260831';
 const FOOD_CACHE='chengdu-food-photos-20260831';
 const ASSETS=[
+  './assets/maps/route-map-clear.png',
   "./",
   "./index.html",
   "./styles.css",

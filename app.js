@@ -137,55 +137,12 @@ function routePointMarker(key) {
 }
 
 function routeMapSvg() {
-  return `<div class="route-map-shell">
-    <div class="map-swipe-hint">左右滑動可查看完整路線</div>
-    <div class="route-map-scroll">
-      <svg class="route-map" viewBox="0 0 960 720" role="img" aria-label="四川行程路線位置圖，相對位置示意">
-        <defs>
-          <linearGradient id="map-paper" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#fffdf7"/><stop offset="100%" stop-color="#f3ead8"/></linearGradient>
-          <marker id="arrow-route-west" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#3f8f82"/></marker>
-          <marker id="arrow-route-south" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c27a3d"/></marker>
-          <marker id="arrow-route-option" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#8062bd"/></marker>
-          <marker id="arrow-north" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#173d36"/></marker>
-          <filter id="map-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#173d36" flood-opacity=".11"/></filter>
-        </defs>
-        <rect width="960" height="720" rx="28" fill="url(#map-paper)" />
-        <g class="map-region map-region-west">
-          <path d="M90 42 C225 20 500 25 700 65 C725 135 690 250 615 310 C520 355 330 330 155 290 C95 220 75 125 90 42Z" fill="#e5f3ed" />
-          <text x="108" y="78" font-size="20" font-weight="850" fill="#3f796f">川西高原</text>
-          <text x="108" y="100" font-size="12" fill="#65877f">第 2–4 天主要移動區</text>
-          <g fill="#b8d1c3" opacity=".82"><path d="M130 185 l34 -60 34 60z"/><path d="M185 180 l43 -75 43 75z"/><path d="M247 193 l32 -57 32 57z"/></g>
-        </g>
-        <g class="map-region map-region-plain">
-          <path d="M250 320 C365 285 665 285 790 345 C815 410 790 500 710 535 C570 555 355 530 245 470 C220 410 225 350 250 320Z" fill="#f2ead8" />
-          <text x="720" y="505" font-size="18" font-weight="850" fill="#8a7654">成都平原</text>
-        </g>
-        <g class="map-region map-region-south">
-          <path d="M250 520 C390 500 630 520 710 610 C665 685 505 705 305 675 C255 640 235 580 250 520Z" fill="#faecd8" />
-          <text x="690" y="650" font-size="18" font-weight="850" fill="#a66b35">川南</text>
-        </g>
-        <g class="cardinal-axis" aria-hidden="true">
-          <line x1="870" y1="96" x2="870" y2="40" stroke="#173d36" stroke-width="4" marker-end="url(#arrow-north)" />
-          <text x="870" y="26" text-anchor="middle" font-size="17" font-weight="900" fill="#173d36">北</text>
-          <text x="42" y="382" font-size="16" font-weight="800" fill="#7a817d">西 ←</text>
-          <text x="918" y="382" text-anchor="end" font-size="16" font-weight="800" fill="#7a817d">→ 東</text>
-          <text x="870" y="694" text-anchor="middle" font-size="16" font-weight="800" fill="#7a817d">南 ↓</text>
-        </g>
-        <g class="map-routes">${MAP_ROUTES.map(routeSegmentLines).join('')}</g>
-        <g class="route-label route-label-west"><rect x="270" y="274" width="102" height="30" rx="15"/><text x="321" y="294" text-anchor="middle">川西段</text></g>
-        <g class="route-label route-label-south"><rect x="505" y="515" width="122" height="30" rx="15"/><text x="566" y="535" text-anchor="middle">樂山峨眉段</text></g>
-        <g class="route-label route-label-option"><rect x="588" y="393" width="106" height="30" rx="15"/><text x="641" y="413" text-anchor="middle">下午擇一</text></g>
-        <g filter="url(#map-shadow)">${Object.keys(MAP_POINTS).map(routePointMarker).join('')}</g>
-      </svg>
-    </div>
-    <div class="map-legend">
-      <span><i class="dot dot-city"></i> 成都住宿中心</span>
-      <span><i class="dot dot-west"></i> 川西段</span>
-      <span><i class="dot dot-south"></i> 樂山峨眉段</span>
-      <span><i class="dot dot-alt"></i> 第 8 天下午擇一</span>
-      <span class="map-scale-note">相對位置示意，非比例尺</span>
-    </div>
-  </div>`;
+  return `<figure class="route-image-wrap">
+    <a class="route-image-link" href="./assets/maps/route-map-clear.png" target="_blank" rel="noopener">
+      <img class="route-image" src="./assets/maps/route-map-clear.png" alt="成都旅途景點相對位置示意圖">
+    </a>
+    <figcaption class="route-image-caption">點圖片可另開大圖查看。圖中將成都放在中心，川西段放在西北方向，樂山與峨眉山放在南方，能更直觀看到相對位置。</figcaption>
+  </figure>`;
 }
 
 function renderTempo() {
@@ -201,10 +158,6 @@ function renderTempo() {
     </article>
   `).join('');
   routeMap.innerHTML = routeMapSvg();
-  requestAnimationFrame(() => {
-    const scroller = routeMap.querySelector('.route-map-scroll');
-    if (scroller && innerWidth < 560) scroller.scrollLeft = Math.min(190, scroller.scrollWidth - scroller.clientWidth);
-  });
 }
 
 let selectedDay = 0;
