@@ -1,13 +1,16 @@
-const CACHE='chengdu-trip-itinerary-0918';
-const FOOD_CACHE='chengdu-food-photos-0918';
-const ASSETS=[
-  './assets/maps/route-map-clear.png',
+const SCOPE_PATH = new URL(self.registration.scope).pathname;
+const CACHE_PREFIX = 'chengdu-guide-' + encodeURIComponent(SCOPE_PATH) + '-';
+const CACHE = CACHE_PREFIX + 'e124960667';
+const FOOD_CACHE = 'chengdu-food-photos';
+const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./manifest.webmanifest",
+  "./styles.css?rev=e124960667",
+  "./app.js?rev=e124960667",
+  "./ATTRACTIONS.html",
   "./IMAGE_CREDITS.html",
+  "./manifest.webmanifest",
+  "./assets/maps/route-map-clear.png",
   "./assets/photos/chunxi.jpg",
   "./assets/photos/dujiangyan_1.jpg",
   "./assets/photos/dujiangyan_2.jpg",
@@ -46,42 +49,52 @@ const ASSETS=[
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
-
 self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys()
-      .then(keys => Promise.all(keys.filter(key => ![CACHE, FOOD_CACHE].includes(key)).map(key => caches.delete(key))))
-      .then(() => self.clients.claim())
-  );
+  event.waitUntil(caches.keys().then(keys => Promise.all(
+    keys.filter(key => key.startsWith(CACHE_PREFIX) && key !== CACHE).map(key => caches.delete(key))
+  )).then(() => self.clients.claim()));
 });
 
 self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
-
-  if (event.request.mode === 'navigate') {
-    event.respondWith(
-      fetch(event.request)
-        .then(response => {
-          const copy=response.clone();
-          caches.open(CACHE).then(cache=>cache.put('./index.html',copy));
-          return response;
-        })
-        .catch(() => caches.match('./index.html'))
-    );
+  const request = event.request;
+  if (request.method !== 'GET') return;
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin) {
+    // Leave external services untouched; keep previously saved food photographs usable.
+    if (request.destination === 'image' && /(^|\.)wikimedia\.org$/.test(url.hostname)) {
+      event.respondWith(caches.match(request).then(cached => cached || fetch(request)));
+    }
     return;
   }
-
-  event.respondWith(
-    caches.match(event.request).then(cached => {
-      if (cached) return cached;
-      return fetch(event.request).then(response => {
-        const targetCache = new URL(event.request.url).origin === self.location.origin ? CACHE : FOOD_CACHE;
-        if (response.ok || response.type === 'opaque') {
-          const copy=response.clone();
-          caches.open(targetCache).then(cache=>cache.put(event.request,copy));
-        }
+  if (!url.pathname.startsWith(SCOPE_PATH)) return;
+  if (request.mode === 'navigate') {
+    event.respondWith((async () => {
+      const cache = await caches.open(CACHE);
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 4000);
+      try {
+        const response = await fetch(request, {signal: controller.signal});
+        if (!response.ok) throw new Error('Navigation unavailable');
+        await cache.put(request, response.clone());
         return response;
-      });
-    })
-  );
+      } catch {
+        const cached = await cache.match(request, {ignoreSearch:true});
+        if (cached) return cached;
+        if (url.pathname === SCOPE_PATH || url.pathname === SCOPE_PATH + 'index.html') {
+          const home = await cache.match(new URL('./index.html',self.registration.scope).href);
+          if (home) return home;
+        }
+        return new Response('此頁尚未儲存，連線後再開啟。', {status:503, headers:{'Content-Type':'text/plain; charset=UTF-8'}});
+      } finally { clearTimeout(timer); }
+    })());
+    return;
+  }
+  event.respondWith((async () => {
+    const cache = await caches.open(CACHE);
+    const cached = await cache.match(request);
+    if (cached) return cached;
+    const response = await fetch(request);
+    if (response.ok) await cache.put(request, response.clone());
+    return response;
+  })());
 });
