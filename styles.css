@@ -159,7 +159,7 @@
 @media(max-width:560px){.map-swipe-hint{display:block}}
 
 
-/* clearer route image */
+/* route image */
 .route-image-wrap{margin:0}
 .route-image-link{display:block;text-decoration:none}
 .route-image{display:block;width:100%;height:auto;border-radius:22px;border:1px solid rgba(23,61,54,.1);background:#fffdf8;box-shadow:0 12px 32px rgba(36,55,49,.08)}
