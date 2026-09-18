@@ -1,12 +1,12 @@
 const SCOPE_PATH = new URL(self.registration.scope).pathname;
 const CACHE_PREFIX = 'chengdu-guide-' + encodeURIComponent(SCOPE_PATH) + '-';
-const CACHE = CACHE_PREFIX + 'e124960667';
+const CACHE = CACHE_PREFIX + 'e918route2';
 const FOOD_CACHE = 'chengdu-food-photos';
 const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?rev=e124960667",
-  "./app.js?rev=e124960667",
+  "./styles.css?rev=e918route2",
+  "./app.js?rev=e918route2",
   "./ATTRACTIONS.html",
   "./IMAGE_CREDITS.html",
   "./manifest.webmanifest",

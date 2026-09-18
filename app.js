@@ -1,5 +1,5 @@
 const PHOTO_CREDITS = {"chunxi.jpg": {"file": "chunxi.jpg", "caption": "春熙路", "group": "成都", "sourceTitle": "Chunxi Road 20260514-2.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chunxi_Road_20260514-2.jpg", "sourceLabel": "Wikimedia Commons"}, "taikoo.jpg": {"file": "taikoo.jpg", "caption": "成都太古里", "group": "成都", "sourceTitle": "Daci Temple Taikoo Li, Chengdu.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daci_Temple_Taikoo_Li,_Chengdu.jpg", "sourceLabel": "Wikimedia Commons"}, "jinli.jpg": {"file": "jinli.jpg", "caption": "錦里", "group": "成都", "sourceTitle": "ChengduJinli.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:ChengduJinli.jpg", "sourceLabel": "Wikimedia Commons"}, "peoples_park.jpg": {"file": "peoples_park.jpg", "caption": "人民公園茶館", "group": "成都", "sourceTitle": "Teahouse in Peoples Park - Chengdu, China - DSC05348.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Teahouse_in_Peoples_Park_-_Chengdu,_China_-_DSC05348.jpg", "sourceLabel": "Wikimedia Commons"}, "kuanzhai.jpg": {"file": "kuanzhai.jpg", "caption": "寬窄巷子", "group": "成都", "sourceTitle": "Wide and Narrow Alleys, Chengdu (20240905).jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wide_and_Narrow_Alleys,_Chengdu_(20240905).jpg", "sourceLabel": "Wikimedia Commons"}, "dujiangyan_1.jpg": {"file": "dujiangyan_1.jpg", "caption": "都江堰", "group": "川西", "sourceTitle": "Dujiangyan Irrigation System.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dujiangyan_Irrigation_System.jpg", "sourceLabel": "Wikimedia Commons"}, "dujiangyan_2.jpg": {"file": "dujiangyan_2.jpg", "caption": "都江堰水利景觀", "group": "川西", "sourceTitle": "Dujiangyan Scenic Area 36613-Dujiangyan (49068399917).jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dujiangyan_Scenic_Area_36613-Dujiangyan_(49068399917).jpg", "sourceLabel": "Wikimedia Commons"}, "songpan_1.jpg": {"file": "songpan_1.jpg", "caption": "松潘古城", "group": "川西", "sourceTitle": "Songpan Old Town.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Songpan_Old_Town.jpg", "sourceLabel": "Wikimedia Commons"}, "songpan_2.jpg": {"file": "songpan_2.jpg", "caption": "松潘古城", "group": "川西", "sourceTitle": "松潘古城 2024-06-17 03.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E6%BD%98%E5%8F%A4%E5%9F%8E_2024-06-17_03.jpg", "sourceLabel": "Wikimedia Commons"}, "huanglong_1.jpg": {"file": "huanglong_1.jpg", "caption": "黃龍彩池", "group": "黃龍", "sourceTitle": "Huanglonggou Pools.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huanglonggou_Pools.jpg", "sourceLabel": "Wikimedia Commons"}, "huanglong_2.jpg": {"file": "huanglong_2.jpg", "caption": "黃龍鈣華彩池", "group": "黃龍", "sourceTitle": "Huanglong-calcific-ponds.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huanglong-calcific-ponds.jpg", "sourceLabel": "Wikimedia Commons"}, "huanglong_3.jpg": {"file": "huanglong_3.jpg", "caption": "黃龍瀑布", "group": "黃龍", "sourceTitle": "HuanglongWaterfall.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:HuanglongWaterfall.jpg", "sourceLabel": "Wikimedia Commons"}, "jiuzhaigou_1.jpg": {"file": "jiuzhaigou_1.jpg", "caption": "九寨溝・五花海", "group": "九寨溝", "sourceTitle": "九寨溝五花海.JPG", "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B9%9D%E5%AF%A8%E6%BA%9D%E4%BA%94%E8%8A%B1%E6%B5%B7.JPG", "sourceLabel": "Wikimedia Commons"}, "jiuzhaigou_2.jpg": {"file": "jiuzhaigou_2.jpg", "caption": "九寨溝・長海", "group": "九寨溝", "sourceTitle": "Long Lake Jiuzhaigou.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Long_Lake_Jiuzhaigou.jpg", "sourceLabel": "Wikimedia Commons"}, "jiuzhaigou_3.jpg": {"file": "jiuzhaigou_3.jpg", "caption": "九寨溝・諾日朗瀑布", "group": "九寨溝", "sourceTitle": "Nuorilang falls.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nuorilang_falls.jpg", "sourceLabel": "Wikimedia Commons"}, "leshan_1.jpg": {"file": "leshan_1.jpg", "caption": "樂山大佛", "group": "樂山峨眉", "sourceTitle": "Leshan Giant Buddha.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha.jpg", "sourceLabel": "Wikimedia Commons"}, "leshan_2.jpg": {"file": "leshan_2.jpg", "caption": "樂山大佛", "group": "樂山峨眉", "sourceTitle": "Leshan Giant Buddha 20260514-8.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha_20260514-8.jpg", "sourceLabel": "Wikimedia Commons"}, "emei_1.jpg": {"file": "emei_1.jpg", "caption": "峨眉山金頂", "group": "樂山峨眉", "sourceTitle": "GoldenSummit.JPG", "sourceUrl": "https://commons.wikimedia.org/wiki/File:GoldenSummit.JPG", "sourceLabel": "Wikimedia Commons"}, "emei_2.jpg": {"file": "emei_2.jpg", "caption": "峨眉山", "group": "樂山峨眉", "sourceTitle": "Golden Summit, Mount Emei, China, August 2016.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Golden_Summit,_Mount_Emei,_China,_August_2016.jpg", "sourceLabel": "Wikimedia Commons"}, "panda_1.jpg": {"file": "panda_1.jpg", "caption": "成都熊貓基地", "group": "熊貓三星堆", "sourceTitle": "Giant Panda at Chengdu Panda Base.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giant_Panda_at_Chengdu_Panda_Base.jpg", "sourceLabel": "Wikimedia Commons"}, "panda_2.jpg": {"file": "panda_2.jpg", "caption": "大熊貓", "group": "熊貓三星堆", "sourceTitle": "Chengdu Research Base of Giant Panda Breeding, 201907, 05.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_05.jpg", "sourceLabel": "Wikimedia Commons"}, "panda_entrance.jpg": {"file": "panda_entrance.jpg", "caption": "成都熊貓基地", "group": "熊貓三星堆", "sourceTitle": "Chengdu Research Base of Giant Panda Breeding, 201907, 09.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_09.jpg", "sourceLabel": "Wikimedia Commons"}, "sanxingdui_1.jpg": {"file": "sanxingdui_1.jpg", "caption": "三星堆博物館", "group": "熊貓三星堆", "sourceTitle": "SanXingDui Museum.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:SanXingDui_Museum.jpg", "sourceLabel": "Wikimedia Commons"}, "sanxingdui_2.jpg": {"file": "sanxingdui_2.jpg", "caption": "三星堆博物館", "group": "熊貓三星堆", "sourceTitle": "Sanxingdui Museum 20260512-1.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanxingdui_Museum_20260512-1.jpg", "sourceLabel": "Wikimedia Commons"}, "sanxingdui_3.jpg": {"file": "sanxingdui_3.jpg", "caption": "三星堆文物", "group": "熊貓三星堆", "sourceTitle": "Sanxingdui Museum 20260512-6.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanxingdui_Museum_20260512-6.jpg", "sourceLabel": "Wikimedia Commons"}, "jinli_2.jpg": {"file": "jinli_2.jpg", "caption": "錦里街景", "group": "成都", "sourceTitle": "Jinli Street - Chengdu, China - DSC05399.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jinli_Street_-_Chengdu,_China_-_DSC05399.jpg", "sourceLabel": "Wikimedia Commons"}, "peoples_park_2.jpg": {"file": "peoples_park_2.jpg", "caption": "人民公園蓋碗茶", "group": "成都", "sourceTitle": "Tea in People's Park - Chengdu, China - DSC05362.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tea_in_People%27s_Park_-_Chengdu,_China_-_DSC05362.jpg", "sourceLabel": "Wikimedia Commons"}, "kuanzhai_2.jpg": {"file": "kuanzhai_2.jpg", "caption": "寬窄巷子", "group": "成都", "sourceTitle": "Wide and Narrow Alleys (53691068061).jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wide_and_Narrow_Alleys_(53691068061).jpg", "sourceLabel": "Wikimedia Commons"}, "huanglong_4.jpg": {"file": "huanglong_4.jpg", "caption": "黃龍迎賓池", "group": "黃龍", "sourceTitle": "Welcome-Ponds Huanglong Sichuan China.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Welcome-Ponds_Huanglong_Sichuan_China.jpg", "sourceLabel": "Wikimedia Commons"}, "jiuzhaigou_4.jpg": {"file": "jiuzhaigou_4.jpg", "caption": "九寨溝・長海", "group": "九寨溝", "sourceTitle": "Long Lake (Jiuzhaigou) 20260511-1.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Long_Lake_(Jiuzhaigou)_20260511-1.jpg", "sourceLabel": "Wikimedia Commons"}, "leshan_3.jpg": {"file": "leshan_3.jpg", "caption": "樂山大佛景區", "group": "樂山峨眉", "sourceTitle": "Leshan giant Buddha.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leshan_giant_Buddha.jpg", "sourceLabel": "Wikimedia Commons"}, "panda_3.jpg": {"file": "panda_3.jpg", "caption": "大熊貓", "group": "熊貓三星堆", "sourceTitle": "Chengdu Research Base of Giant Panda Breeding, 201907, 10.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_10.jpg", "sourceLabel": "Wikimedia Commons"}, "sanxingdui_4.jpg": {"file": "sanxingdui_4.jpg", "caption": "三星堆文物", "group": "熊貓三星堆", "sourceTitle": "Sanxingdui Museum 20260512-7.jpg", "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sanxingdui_Museum_20260512-7.jpg", "sourceLabel": "Wikimedia Commons"}};
-const ITINERARY = [{"date": "9/18", "weekday": "Day 1 · 星期五", "title": "抵達成都・春熙路與太古里", "theme": "接機入住，第一晚只排市中心", "photos": ["chunxi.jpg", "taikoo.jpg", "jinli_2.jpg"], "items": [["抵達後", "台灣 → 成都・接機入住", "依實際航班抵達成都後，由旅行社安排接機前往西蜀天際辦理入住。", [["高德｜西蜀天際", "西蜀天际 成都"], ["高德｜成都機場", "成都天府國際機場"]]], ["晚上", "春熙路・太古里", "第一晚以吃飯、散步、熟悉成都為主，不再安排長距離景點。", [["高德｜春熙路", "成都 春熙路"], ["高德｜太古里", "成都 太古里"]]]]}, {"date": "9/19", "weekday": "Day 2 · 星期六", "title": "成都 → 都江堰 → 川主寺", "theme": "正式進入川西段", "photos": ["dujiangyan_1.jpg", "dujiangyan_2.jpg", "songpan_1.jpg"], "items": [["上午", "成都出發", "搭乘 7 座商務車離開成都，開始往川西方向移動。", []], ["途中", "都江堰", "途中停留都江堰，再繼續前往川主寺。", [["高德｜都江堰", "都江堰景區"]]], ["晚上", "川主寺・入住旭日仙閣酒店", "抵達川主寺後入住旭日仙閣酒店，準備隔天黃龍一日遊。", [["高德｜旭日仙閣酒店", "旭日仙阁酒店 川主寺"]]]]}, {"date": "9/20", "weekday": "Day 3 · 星期日", "title": "黃龍一日遊 → 九寨溝口", "theme": "索道上行＋五彩池", "photos": ["huanglong_1.jpg", "huanglong_2.jpg", "huanglong_3.jpg", "huanglong_4.jpg"], "items": [["上午", "前往黃龍景區", "由川主寺前往黃龍，整天留給黃龍景區。", [["高德｜黃龍", "黃龍風景名勝區"]]], ["景區內", "索道上行・五彩池", "依旅行社安排，以上行索道與景區交通前往五彩池為主。", [["百度｜黃龍五彩池", "黃龍 五彩池"]]], ["傍晚", "前往九寨溝口・入住三墨酒店", "黃龍結束後移動至九寨溝溝口，入住九寨溝三墨酒店。", [["高德｜九寨溝三墨酒店", "九寨沟三墨酒店 九寨沟沟口"], ["高德｜九寨溝", "九寨溝風景名勝區"]]]]}, {"date": "9/21", "weekday": "Day 4 · 星期一", "title": "九寨溝全天 → 松潘古城", "theme": "景區觀光車為主", "photos": ["jiuzhaigou_1.jpg", "jiuzhaigou_2.jpg", "jiuzhaigou_3.jpg", "jiuzhaigou_4.jpg", "songpan_2.jpg"], "items": [["全天", "九寨溝一日遊", "完整留給九寨溝，景區內以觀光車搭配步行；實際海子順序依當天景區安排。", [["高德｜九寨溝", "九寨溝風景名勝區"]]], ["傍晚", "九寨溝 → 松潘古城・入住尚景酒店", "完成九寨溝後前往松潘古城，入住尚景酒店。", [["高德｜尚景酒店", "尚景酒店 松潘古城"], ["高德｜松潘古城", "松潘古城"]]]]}, {"date": "9/22", "weekday": "Day 5 · 星期二", "title": "松潘返回成都・休息半日", "theme": "奎星樓街或按摩休息", "photos": ["songpan_1.jpg", "songpan_2.jpg", "chunxi.jpg"], "items": [["上午", "松潘 → 成都", "返回成都，結束川西段；今晚入住豪閣遇上酒店。", [["高德｜豪閣遇上酒店", "豪阁遇上酒店 成都"]]], ["下午", "奎星樓街／按摩", "依抵達時間與體力選擇逛奎星樓街，或直接按摩與休息。", [["高德｜奎星樓街", "成都 奎星樓街"]]]]}, {"date": "9/23", "weekday": "Day 6 · 星期三", "title": "成都 → 樂山大佛 → 峨眉山", "theme": "樂山採遊船路線", "photos": ["leshan_1.jpg", "leshan_2.jpg", "leshan_3.jpg", "emei_2.jpg"], "items": [["上午", "樂山大佛遊船", "由成都前往樂山，以遊船方式觀看大佛。", [["高德｜樂山大佛", "樂山大佛"]]], ["中午", "樂山市區午餐", "看完大佛後在樂山市區用餐，再往峨眉山。", [["百度｜樂山美食", "樂山 美食 推薦"]]], ["下午", "峨眉山報國寺區域・入住酒店", "下午前往峨眉山報國寺區域，入住柏隱湯泉智能酒店。", [["高德｜柏隱湯泉智能酒店", "柏隐汤泉智能酒店 峨眉山"], ["高德｜報國寺", "峨眉山 報國寺"]]]]}, {"date": "9/24", "weekday": "Day 7 · 星期四", "title": "峨眉山金頂一日遊 → 成都・撫琴夜市", "theme": "觀光車＋索道為主／晚上逛夜市", "photos": ["emei_1.jpg", "emei_2.jpg"], "items": [["全天", "峨眉山金頂", "以景區觀光車與索道為主要移動方式，完成金頂行程。", [["高德｜峨眉山金頂", "峨眉山 金頂"]]], ["傍晚", "返回成都", "下山後返回成都，入住豪閣遇上酒店。", [["高德｜豪閣遇上酒店", "豪阁遇上酒店 成都"]]], ["晚上", "撫琴夜市", "晚上前往撫琴夜市，作為下山回成都後的輕鬆逛吃行程。", [["高德｜撫琴夜市", "成都 抚琴夜市"]]]]}, {"date": "9/25", "weekday": "Day 8 · 星期五", "title": "熊貓基地 → 青城山／三星堆擇一 → 錦里", "theme": "熊貓最早時段＋下午二選一", "photos": ["panda_1.jpg", "panda_2.jpg", "panda_entrance.jpg", "panda_3.jpg", "sanxingdui_1.jpg", "sanxingdui_2.jpg", "sanxingdui_3.jpg", "sanxingdui_4.jpg", "jinli.jpg"], "items": [["最早時段", "成都大熊貓繁育研究基地", "旅行社特別安排最早時段，上午先看熊貓。", [["高德｜熊貓基地", "成都大熊貓繁育研究基地"]]], ["下午", "青城山／三星堆博物館擇一", "下午由青城山與三星堆博物館兩個方案中擇一，實際安排依出發前確認為準。", [["高德｜青城山", "青城山風景區"], ["高德｜三星堆", "三星堆博物館"]]], ["晚上", "錦里古街", "回成都後安排錦里夜間散步與小吃，今晚入住豪閣遇上酒店。", [["高德｜錦里", "成都 錦里古街"], ["高德｜豪閣遇上酒店", "豪阁遇上酒店 成都"]]]]}, {"date": "9/26", "weekday": "Day 9 · 星期六", "title": "成都慢生活・人民公園・寬窄巷子", "theme": "喝茶＋自由活動＋川劇", "photos": ["peoples_park.jpg", "peoples_park_2.jpg", "kuanzhai.jpg", "kuanzhai_2.jpg", "jinli_2.jpg"], "items": [["上午", "人民公園・喝茶", "最後一個完整旅行日刻意放慢，先在人民公園坐下喝茶。", [["高德｜人民公園", "成都 人民公園"]]], ["下午", "寬窄巷子・自由活動", "下午安排寬窄巷子，並補前幾天沒完成的採買與小吃。", [["高德｜寬窄巷子", "成都 寬窄巷子"]]], ["晚上", "川劇變臉", "最後一晚安排川劇變臉，場次與劇場之後再補；今晚仍入住豪閣遇上酒店。", [["百度｜川劇場次", "成都 川劇 變臉 表演"], ["高德｜豪閣遇上酒店", "豪阁遇上酒店 成都"]]]]}, {"date": "9/27", "weekday": "Day 10 · 星期日", "title": "成都返程・分兩次送機", "theme": "兩組航班時間待補", "photos": ["taikoo.jpg", "chunxi.jpg"], "items": [["上午", "自由活動・整理行李", "依各自航班時間安排最後採買與行李整理。", []], ["Flight 01", "第一批送機", "旅行社確認分兩次送機；第一組航班時間與機場待補。", []], ["Flight 02", "第二批送機", "第二組航班時間與機場待補。", []]]}];
+const ITINERARY = [{"date": "9/18", "weekday": "Day 1 · 星期五", "title": "抵達成都・春熙路與太古里", "theme": "接機入住，第一晚只排市中心", "photos": ["chunxi.jpg", "taikoo.jpg", "jinli_2.jpg"], "items": [["抵達後", "台灣 → 成都・接機入住", "依實際航班抵達成都後，由旅行社安排接機前往西蜀天際辦理入住。", [["高德｜西蜀天際", "西蜀天际 成都"], ["高德｜成都機場", "成都天府國際機場"]]], ["晚上", "春熙路・太古里", "第一晚以吃飯、散步、熟悉成都為主，不再安排長距離景點。", [["高德｜春熙路", "成都 春熙路"], ["高德｜太古里", "成都 太古里"]]]]}, {"date": "9/19", "weekday": "Day 2 · 星期六", "title": "成都 → 都江堰 → 九寨溝", "theme": "都江堰後直接進九寨溝・長拉車日", "photos": ["dujiangyan_1.jpg", "dujiangyan_2.jpg", "jiuzhaigou_2.jpg"], "items": [["上午", "成都出發", "搭乘 7 座商務車離開成都，先前往都江堰。", []], ["途中", "都江堰", "依原安排遊覽都江堰；午餐與停留時間要替後續長途車程留空間。", [["高德｜都江堰", "都江堰景區"]]], ["下午", "都江堰 → 九寨溝", "完成都江堰後直接往九寨溝方向移動；川西道路狀況可能影響實際抵達時間。", [["高德｜九寨溝", "九寨溝風景名勝區"]]], ["晚上", "入住天源豪生", "抵達九寨溝後入住天源豪生；此為 9/19 最新升級住宿。", [["高德｜天源豪生", "天源豪生 九寨沟"]]]]}, {"date": "9/20", "weekday": "Day 3 · 星期日", "title": "九寨溝全天 → 川主寺", "theme": "九寨溝完整一日・晚住川主寺", "photos": ["jiuzhaigou_1.jpg", "jiuzhaigou_2.jpg", "jiuzhaigou_3.jpg", "jiuzhaigou_4.jpg"], "items": [["全天", "九寨溝一日遊", "完整留給九寨溝，景區內以觀光車搭配步行；實際海子順序依當天景區安排。", [["高德｜九寨溝", "九寨溝風景名勝區"]]], ["傍晚", "九寨溝 → 川主寺", "離園後前往川主寺住宿；目前川主寺附近路況可能因塌方處理而機動調整。", [["高德｜川主寺", "川主寺镇"]]], ["晚上", "入住旭日仙閣酒店", "現階段以旭日仙閣酒店為住宿安排；若道路或現場狀況改變，以旅行社與司導通知為準。", [["高德｜旭日仙閣酒店", "旭日仙阁酒店 川主寺"]]]]}, {"date": "9/21", "weekday": "Day 4 · 星期一", "title": "黃龍一日遊 → 松潘古城", "theme": "黃龍彩池＋松潘古城", "photos": ["huanglong_1.jpg", "huanglong_2.jpg", "huanglong_3.jpg", "songpan_1.jpg"], "items": [["上午", "川主寺 → 黃龍", "由川主寺前往黃龍，以上行索道與景區交通前往五彩池為主。", [["高德｜黃龍", "黃龍風景名勝區"]]], ["景區內", "五彩池與鈣華景觀", "整天核心是黃龍彩池、鈣華地貌與山林景觀；實際步行路段依當天安排。", [["百度｜黃龍五彩池", "黃龍 五彩池"]]], ["傍晚", "黃龍 → 松潘古城", "黃龍結束後前往松潘古城，晚上入住尚景酒店。", [["高德｜松潘古城", "松潘古城"]]]]}, {"date": "9/22", "weekday": "Day 5 · 星期二", "title": "松潘古城 → 都江堰", "theme": "川西返回・改住都江堰", "photos": ["songpan_1.jpg", "songpan_2.jpg", "dujiangyan_1.jpg"], "items": [["上午", "松潘古城出發", "從松潘古城返回四川盆地方向，今天以長距離移動為主。", []], ["下午", "前往都江堰", "不再返回成都市區；直接前往都江堰住宿，實際抵達時間依路況。", [["高德｜都江堰", "都江堰市"]]], ["晚上", "入住江上名都酒店", "9/22 最新住宿改為都江堰江上名都酒店。", [["高德｜江上名都酒店", "江上名都酒店 都江堰"]]]]}, {"date": "9/23", "weekday": "Day 6 · 星期三", "title": "都江堰 → 樂山大佛 → 峨眉山", "theme": "由都江堰出發・樂山遊船＋午餐", "photos": ["dujiangyan_1.jpg", "leshan_1.jpg", "leshan_2.jpg", "emei_2.jpg"], "items": [["上午", "都江堰 → 樂山", "由都江堰直接前往樂山，不再從成都出發。", []], ["上午／中午", "樂山大佛遊船", "以遊船方式觀看樂山大佛；船班、水位與碼頭安排以當天為準。", [["高德｜樂山大佛", "樂山大佛"]]], ["中午", "樂山市區午餐", "看完大佛後在樂山市區用餐，再前往峨眉山。", [["百度｜樂山美食", "樂山 美食 推薦"]]], ["下午", "峨眉山報國寺區域・入住酒店", "下午前往峨眉山報國寺區域，入住柏隱湯泉智能酒店。", [["高德｜柏隱湯泉智能酒店", "柏隐汤泉智能酒店 峨眉山"], ["高德｜報國寺", "峨眉山 报国寺"]]]]}, {"date": "9/24", "weekday": "Day 7 · 星期四", "title": "峨眉山金頂一日遊 → 成都・撫琴夜市", "theme": "觀光車＋索道為主／晚上逛夜市", "photos": ["emei_1.jpg", "emei_2.jpg"], "items": [["全天", "峨眉山金頂", "以景區觀光車與索道為主要移動方式，完成金頂行程。", [["高德｜峨眉山金頂", "峨眉山 金頂"]]], ["傍晚", "返回成都", "下山後返回成都，入住豪閣遇上酒店。", [["高德｜豪閣遇上酒店", "豪阁遇上酒店 成都"]]], ["晚上", "撫琴夜市", "晚上前往撫琴夜市，作為下山回成都後的輕鬆逛吃行程。", [["高德｜撫琴夜市", "成都 抚琴夜市"]]]]}, {"date": "9/25", "weekday": "Day 8 · 星期五", "title": "熊貓基地 → 青城山／三星堆擇一 → 錦里", "theme": "熊貓最早時段＋下午二選一", "photos": ["panda_1.jpg", "panda_2.jpg", "panda_entrance.jpg", "panda_3.jpg", "sanxingdui_1.jpg", "sanxingdui_2.jpg", "sanxingdui_3.jpg", "sanxingdui_4.jpg", "jinli.jpg"], "items": [["最早時段", "成都大熊貓繁育研究基地", "旅行社特別安排最早時段，上午先看熊貓。", [["高德｜熊貓基地", "成都大熊貓繁育研究基地"]]], ["下午", "青城山／三星堆博物館擇一", "下午由青城山與三星堆博物館兩個方案中擇一，實際安排依出發前確認為準。", [["高德｜青城山", "青城山風景區"], ["高德｜三星堆", "三星堆博物館"]]], ["晚上", "錦里古街", "回成都後安排錦里夜間散步與小吃，今晚入住豪閣遇上酒店。", [["高德｜錦里", "成都 錦里古街"], ["高德｜豪閣遇上酒店", "豪阁遇上酒店 成都"]]]]}, {"date": "9/26", "weekday": "Day 9 · 星期六", "title": "成都慢生活・人民公園・寬窄巷子", "theme": "喝茶＋自由活動＋川劇", "photos": ["peoples_park.jpg", "peoples_park_2.jpg", "kuanzhai.jpg", "kuanzhai_2.jpg", "jinli_2.jpg"], "items": [["上午", "人民公園・喝茶", "最後一個完整旅行日刻意放慢，先在人民公園坐下喝茶。", [["高德｜人民公園", "成都 人民公園"]]], ["下午", "寬窄巷子・自由活動", "下午安排寬窄巷子，並補前幾天沒完成的採買與小吃。", [["高德｜寬窄巷子", "成都 寬窄巷子"]]], ["晚上", "川劇變臉", "最後一晚安排川劇變臉，場次與劇場之後再補；今晚仍入住豪閣遇上酒店。", [["百度｜川劇場次", "成都 川劇 變臉 表演"], ["高德｜豪閣遇上酒店", "豪阁遇上酒店 成都"]]]]}, {"date": "9/27", "weekday": "Day 10 · 星期日", "title": "成都返程・分兩次送機", "theme": "兩組航班時間待補", "photos": ["taikoo.jpg", "chunxi.jpg"], "items": [["上午", "自由活動・整理行李", "依各自航班時間安排最後採買與行李整理。", []], ["Flight 01", "第一批送機", "旅行社確認分兩次送機；第一組航班時間與機場待補。", []], ["Flight 02", "第二批送機", "第二組航班時間與機場待補。", []]]}];
 const PLACES = [
   {
     "id": "chunxi",
@@ -92,7 +92,7 @@ const PLACES = [
     "tagline": "看懂水流，就看懂這座工程",
     "photo": "dujiangyan_1.jpg",
     "photoCaption": "都江堰",
-    "tripPlan": "9/19 成都 → 都江堰 → 川主寺；當天還要繼續往川西移動。",
+    "tripPlan": "9/19 成都 → 都江堰後，當天直接前往九寨溝；9/22 晚上返回都江堰住宿，9/23 由都江堰出發前往樂山。",
     "intro": "都江堰的重點是至今仍在運作的水利系統，而不只是古蹟外觀。工程利用岷江的地勢和水流，讓分水、排沙與引水彼此配合。魚嘴、飛沙堰、寶瓶口三個名字值得先記住：到現場沿著水流看它們的關係，會比單獨拍一座堰或一條河，更容易理解它為什麼能長期供應成都平原用水。",
     "highlights": [
       {
@@ -110,7 +110,7 @@ const PLACES = [
     ],
     "routeAdvice": "建議請司導把三大工程串起來講，依當天入口與接車位置走單向路線，避免來回折返。",
     "duration": "約 2–3 小時；依司導集合時間調整",
-    "reminder": "這天不是成都近郊悠閒一日遊，午餐與遊覽都須替前往川主寺的車程留時間。",
+    "reminder": "9/19 遊覽後還有長途車程前往九寨溝，遊覽與午餐時間不要拖長；9/22 只把都江堰作為住宿點，不代表再進景區。",
     "sources": [
       {
         "label": "UNESCO｜青城山與都江堰",
@@ -127,12 +127,12 @@ const PLACES = [
     "group": "川西",
     "area": "松潘縣",
     "dates": [
-      "9/19"
+      "9/20"
     ],
     "tagline": "川西山區的住宿中繼站",
     "photo": null,
     "photoCaption": "",
-    "tripPlan": "9/19 晚住旭日仙閣酒店。原表列川主寺為住宿地，未列獨立寺院參觀。",
+    "tripPlan": "9/20 九寨溝全天結束後前往川主寺住宿；目前川主寺附近有塌方處理，住宿與道路可能視路況機動調整。",
     "intro": "川主寺鎮位於松潘縣城以北，是藏、羌、回、漢多民族聚居的山區城鎮，也承擔旅遊接待與交通集散功能。對這趟行程來說，先把它理解為黃龍前一晚的住宿與補給點，比把「川主寺」三個字直接等同一座必逛寺院更準確。抵達後可用晚餐、短散步與休息，銜接第二天的景區行程。",
     "highlights": [
       {
@@ -150,7 +150,7 @@ const PLACES = [
     ],
     "routeAdvice": "建議先入住再用餐；仍有精神時，只在飯店周邊走一小段，不加排遠處景點。",
     "duration": "住宿為主；飯後散步約 20–40 分鐘",
-    "reminder": "目前文件沒有寺院票務或參觀時段；不要把鎮內其他景點自動當成團費已含。",
+    "reminder": "川主寺周邊道路正在處理塌方情況；這一段的抵達時間與酒店安排以旅行社、司導當天通知為準。",
     "sources": [
       {
         "label": "松潘縣政府｜川主寺鎮",
@@ -158,7 +158,7 @@ const PLACES = [
       }
     ],
     "query": "川主寺镇 松潘",
-    "status": "住宿地",
+    "status": "住宿地・路況機動",
     "optionGroup": ""
   },
   {
@@ -167,12 +167,12 @@ const PLACES = [
     "group": "川西",
     "area": "松潘縣・黃龍景區",
     "dates": [
-      "9/20"
+      "9/21"
     ],
     "tagline": "一層層彩池，看鈣華的形狀",
     "photo": "huanglong_1.jpg",
     "photoCaption": "黃龍",
-    "tripPlan": "9/20 黃龍全天；原表寫「上行索道＋動車到五彩池」，結束後住九寨溝口。",
+    "tripPlan": "9/21 由川主寺前往黃龍全天遊覽；行程以上行索道與景區交通到五彩池為主，結束後前往松潘古城。",
     "intro": "黃龍以鈣華彩池、灘流與瀑布構成的高山景觀著名。和九寨溝的大湖面不同，這裡適合看細小池埂如何把水分成層層相連的池群，以及淺色沉積物和水色的對比。五彩池是本次行程明列的重點；觀景時可以先看整片池群，再留意水從上一層流到下一層的紋理。",
     "highlights": [
       {
@@ -207,12 +207,12 @@ const PLACES = [
     "group": "川西",
     "area": "九寨溝景區",
     "dates": [
-      "9/21"
+      "9/20"
     ],
     "tagline": "湖泊、瀑布與森林一起看",
     "photo": "jiuzhaigou_1.jpg",
     "photoCaption": "九寨溝",
-    "tripPlan": "9/21 九寨溝一整天，含觀光車；離園後前往松潘古城住宿。",
+    "tripPlan": "9/19 晚抵達九寨溝住宿；9/20 完整遊覽九寨溝一整天，含觀光車，離園後前往川主寺。",
     "intro": "九寨溝不是單一湖泊，而是由山谷、海子、森林和瀑布連成的景觀。五花海適合看清澈水色與水中景物，長海展現較開闊的高山湖泊尺度，諾日朗瀑布則是另一種水流的力量。先理解景區分成不同溝谷，再配合觀光車挑選步行段，會比把所有海子當成打卡清單更從容。",
     "highlights": [
       {
@@ -230,7 +230,7 @@ const PLACES = [
     ],
     "routeAdvice": "建議入園後先聽觀光車分流安排，再選幾段重點步道；不預設所有海子都會到達。",
     "duration": "依原表一整天；另留離園與赴松潘車程",
-    "reminder": "上述為代表景觀介紹，不是旅行社承諾逐一造訪的清單。出園集合時間應先確認，避免影響晚上赴松潘。",
+    "reminder": "代表景觀介紹不等於旅行社承諾逐一造訪的清單。出園後仍要前往川主寺，集合時間需先確認。",
     "sources": [
       {
         "label": "九寨溝景區｜標誌景點",
@@ -257,7 +257,7 @@ const PLACES = [
     "tagline": "城門之外，也看看街上的生活",
     "photo": "songpan_1.jpg",
     "photoCaption": "松潘古城",
-    "tripPlan": "9/21 九寨溝後入住尚景酒店；9/22 從松潘古城返回成都。",
+    "tripPlan": "9/21 黃龍結束後前往松潘古城，入住尚景酒店；9/22 從松潘出發，改住都江堰。",
     "intro": "松潘長期是川西北交通與茶馬互市的重要節點。古城的看點不只有城牆、城門，也包含街巷中的商業與不同文化交會留下的生活氣息。走過山水景區後，這裡適合把注意力換到建築尺度、門面與地方飲食：用一段短散步看看城鎮，而不是再安排一場高強度的景點巡禮。",
     "highlights": [
       {
@@ -275,7 +275,7 @@ const PLACES = [
     ],
     "routeAdvice": "建議晚上先辦入住與用餐，再依到達時間短逛古城；隔日仍須長途返回成都。",
     "duration": "約 30–60 分鐘；抵達較晚可取消散步",
-    "reminder": "原表並未確認登城牆、夜遊門票或演出；這些若臨時想參加，需另外確認。",
+    "reminder": "9/22 是長距離返回日，古城散步仍以 9/21 晚上抵達時間與體力為準。",
     "sources": [
       {
         "label": "松潘縣政府｜古城與茶馬文化",
@@ -291,13 +291,11 @@ const PLACES = [
     "name": "奎星樓街",
     "group": "成都",
     "area": "青羊區・少城街區",
-    "dates": [
-      "9/22"
-    ],
+    "dates": [],
     "tagline": "這段時間，把胃留給街頭小吃",
     "photo": null,
     "photoCaption": "",
-    "tripPlan": "9/22 返回成都後，原表寫「奎興樓街或按摩休息」；街名查找採「奎星樓街」。",
+    "tripPlan": "最新版 9/22 已改為松潘 → 都江堰住宿，因此奎星樓街不再列入當天固定行程；若後續自由活動想去，可保留作成都備選。",
     "intro": "奎星樓街是少城街區裡結合小吃、餐廳、咖啡與文創氣氛的一條街。它的樂趣在於店面接連分布，幾個人可以一邊走、一邊決定下一口吃什麼，而不是一定要坐下吃一份完整套餐。剛從松潘回來的下午，很適合把它當作彈性的小吃散步，精神不足時則照原安排改成按摩或休息。",
     "highlights": [
       {
@@ -323,7 +321,7 @@ const PLACES = [
       }
     ],
     "query": "成都 奎星楼街",
-    "status": "彈性安排",
+    "status": "備選・不在最新版固定行程",
     "optionGroup": ""
   },
   {
@@ -337,7 +335,7 @@ const PLACES = [
     "tagline": "從江上，看大佛與山體的比例",
     "photo": "leshan_1.jpg",
     "photoCaption": "樂山大佛",
-    "tripPlan": "9/23 由成都到樂山，以遊船方式看大佛；之後在樂山午餐，再赴峨眉。",
+    "tripPlan": "9/23 由都江堰出發前往樂山，以遊船方式看大佛；之後在樂山市區午餐，再赴峨眉。",
     "intro": "樂山大佛是依山開鑿的唐代大型佛像，高約 71 公尺，面向岷江、大渡河與青衣江匯流一帶。這次安排的是遊船，觀賞重點在完整佛像、山體及江面之間的比例，而不是近距離攀走佛身旁的棧道。登船前先知道自己的觀看角度，就不會把搭船行程和步行下到佛腳混為一談。",
     "highlights": [
       {
@@ -355,7 +353,7 @@ const PLACES = [
     ],
     "routeAdvice": "建議依司導指定碼頭集合，先確認班次；看完大佛後把午餐留給樂山市區。",
     "duration": "碼頭報到、候船與遊覽合計預留約 1.5–2 小時",
-    "reminder": "這是行前時間建議，不是已確認的船班或航程。水位、天候及調度可影響行船，以當天碼頭通知為準。",
+    "reminder": "由都江堰出發，車程安排與碼頭報到時間需由司導前一晚再確認；遊船仍可能受水位、天候及調度影響。",
     "sources": [
       {
         "label": "UNESCO｜峨眉山與樂山大佛",
@@ -780,20 +778,20 @@ const PLACES = [
     "mapLabel": "高德搜尋場館"
   }
 ];
-const HOTELS = [{"date": "9/18", "area": "成都", "name": "西蜀天際", "status": "已確認", "query": "西蜀天际 成都"}, {"date": "9/19", "area": "川主寺", "name": "旭日仙閣酒店", "status": "已確認", "query": "旭日仙阁酒店 川主寺"}, {"date": "9/20", "area": "九寨溝口", "name": "九寨溝三墨酒店", "status": "已確認", "query": "九寨沟三墨酒店 九寨沟沟口"}, {"date": "9/21", "area": "松潘古城", "name": "尚景酒店", "status": "已確認", "query": "尚景酒店 松潘古城"}, {"date": "9/22", "area": "成都", "name": "豪閣遇上酒店", "status": "已確認", "query": "豪阁遇上酒店 成都"}, {"date": "9/23", "area": "峨眉", "name": "柏隱湯泉智能酒店", "status": "已確認", "query": "柏隐汤泉智能酒店 峨眉山"}, {"date": "9/24", "area": "成都", "name": "豪閣遇上酒店", "status": "已確認", "query": "豪阁遇上酒店 成都"}, {"date": "9/25", "area": "成都", "name": "豪閣遇上酒店", "status": "已確認", "query": "豪阁遇上酒店 成都"}, {"date": "9/26", "area": "成都", "name": "豪閣遇上酒店", "status": "已確認", "query": "豪阁遇上酒店 成都"}, {"date": "9/27", "area": "返程", "name": "不住宿", "status": "返程日", "query": ""}];
+const HOTELS = [{"date": "9/18", "area": "成都", "name": "西蜀天際", "status": "已確認", "query": "西蜀天际 成都"}, {"date": "9/19", "area": "九寨溝", "name": "天源豪生", "status": "升級確認", "query": "天源豪生 九寨沟"}, {"date": "9/20", "area": "川主寺", "name": "旭日仙閣酒店", "status": "暫定・視路況", "query": "旭日仙阁酒店 川主寺"}, {"date": "9/21", "area": "松潘古城", "name": "尚景酒店", "status": "已確認", "query": "尚景酒店 松潘古城"}, {"date": "9/22", "area": "都江堰", "name": "江上名都酒店", "status": "已確認", "query": "江上名都酒店 都江堰"}, {"date": "9/23", "area": "峨眉", "name": "柏隱湯泉智能酒店", "status": "已確認", "query": "柏隐汤泉智能酒店 峨眉山"}, {"date": "9/24", "area": "成都", "name": "豪閣遇上酒店", "status": "已確認", "query": "豪阁遇上酒店 成都"}, {"date": "9/25", "area": "成都", "name": "豪閣遇上酒店", "status": "已確認", "query": "豪阁遇上酒店 成都"}, {"date": "9/26", "area": "成都", "name": "豪閣遇上酒店", "status": "已確認", "query": "豪阁遇上酒店 成都"}, {"date": "9/27", "area": "返程", "name": "不住宿", "status": "返程日", "query": ""}];
 const DAY_FOOD = {
   "9/18": { title: "成都第一晚・少量多吃", body: "串串香、擔擔麵／甜水麵、鐘水餃、蛋烘糕、冰粉都適合分著吃。若胃口很好再加火鍋；隔天要往川西走，不必第一晚就吃到太撐。", chips: ["串串香", "擔擔麵", "甜水麵", "鐘水餃", "蛋烘糕", "冰粉"] },
-  "9/19": { title: "都江堰輕吃，晚上進高原風味", body: "都江堰可試蔥蔥卷、豆腐腦、川味小麵或臘肉，但不要為了吃拖太久；晚上到川主寺後可開始找牦牛肉。", chips: ["蔥蔥卷", "豆腐腦", "川味小麵", "臘肉", "牦牛肉"] },
-  "9/20": { title: "黃龍日・清淡舒服最重要", body: "可吃牦牛肉、青稞餅、藏式酸奶或酥油茶，但高海拔日不要大量喝酒，也不要突然暴食超辣火鍋。", chips: ["牦牛肉", "青稞餅", "藏式酸奶", "酥油茶"] },
-  "9/21": { title: "九寨溝後，松潘吃一餐高原風味", body: "晚上最適合牦牛肉湯鍋／火鍋，配青稞餅與酸奶，地點與旅行感都很完整。", chips: ["牦牛肉湯鍋／火鍋", "青稞餅", "酸奶"] },
-  "9/22": { title: "成都小吃爆吃日", body: "奎星樓街適合少量多餐：甜水麵、紅油抄手、串串、冒菜、烤苕皮、狼牙土豆、蛋烘糕、冰粉，四個人分著吃最好。", chips: ["甜水麵", "紅油抄手", "串串", "冒菜", "烤苕皮", "狼牙土豆", "蛋烘糕", "冰粉"] },
+  "9/19": { title: "都江堰輕吃，晚上到九寨溝", body: "都江堰可以簡單吃蔥蔥卷、豆腐腦或川味小麵，但今天還要長途進九寨溝，不要為了吃拖太久；抵達後再依時間安排晚餐。", chips: ["蔥蔥卷", "豆腐腦", "川味小麵", "九寨溝晚餐"] },
+  "9/20": { title: "九寨溝全天，晚到川主寺", body: "白天以景區補給為主，離園後前往川主寺；晚上可找牦牛肉、青稞餅或藏式酸奶，但以舒服、好消化為優先。", chips: ["景區補給", "牦牛肉", "青稞餅", "藏式酸奶"] },
+  "9/21": { title: "黃龍後，松潘吃一餐高原風味", body: "黃龍結束後到松潘，晚上最適合牦牛肉湯鍋／火鍋，配青稞餅與酸奶。", chips: ["牦牛肉湯鍋／火鍋", "青稞餅", "酸奶"] },
+  "9/22": { title: "長途返回・都江堰晚餐", body: "今天從松潘返回都江堰，重點是順利抵達與休息；晚餐可就近找川菜或豆腐腦，不再特地回成都追小吃。", chips: ["都江堰晚餐", "豆腐腦", "川菜"] },
   "9/23": { title: "整趟美食最強的一天・請留胃", body: "樂山不要只吃一樣。四個人可把蹺腳牛肉、缽缽雞、甜皮鴨、牛肉豆腐腦與油炸串串拆成多站分食。", chips: ["蹺腳牛肉", "缽缽雞", "甜皮鴨", "牛肉豆腐腦", "油炸串串"] },
   "9/24": { title: "峨眉山・下山補地方味", body: "可留意豆腐腦、豆花與雪魔芋；回成都後再決定要不要安排一頓比較重的川菜。", chips: ["豆腐腦", "豆花", "雪魔芋"] },
   "9/25": { title: "熊貓＋三星堆，晚餐回成都吃川菜", body: "白天資訊量大，不需要一直塞小吃；晚上回成都可用麻婆豆腐、回鍋肉、水煮牛肉等桌菜收尾。錦里可以逛吃，但不用把最好吃的一餐押在錦里。", chips: ["麻婆豆腐", "回鍋肉", "水煮牛肉", "錦里小吃"] },
   "9/26": { title: "蓋碗茶＋最後一輪成都美食", body: "上午人民公園先喝茶，下午自由活動再補火鍋、串串、甜水麵、冰粉或前幾天漏掉的清單。", chips: ["蓋碗茶", "成都火鍋", "串串香", "甜水麵", "冰粉"] },
   "9/27": { title: "回程前補吃", body: "依兩組航班時間處理最後早餐或午餐，優先補最想再吃一次、又不會讓送機時間失控的項目。", chips: ["最後補吃"] },
 };
-const TIME_PLAN = [{"date": "9/18", "title": "抵達成都", "highlight": "城市暖身日", "rows": [["18:05前後", "成都機場", "抵達，與司機會合"], ["19:30", "西蜀天際", "辦理入住、放行李"], ["20:30", "春熙路", "晚餐與散步開始"], ["21:15", "太古里", "逛街、拍照"], ["22:30", "回飯店", "早點休息"]]}, {"date": "9/19", "title": "成都→都江堰→川主寺", "highlight": "長拉車日", "rows": [["08:00", "成都出發", "正式往川西移動"], ["10:00", "都江堰", "景區停留、簡單午餐"], ["12:30", "離開都江堰", "繼續往川主寺"], ["18:00", "旭日仙閣酒店", "抵達川主寺住宿"], ["19:30", "川主寺晚餐", "牦牛肉／高原風味"]]}, {"date": "9/20", "title": "黃龍一日遊", "highlight": "高海拔景區日", "rows": [["07:30", "川主寺出發", "往黃龍景區"], ["09:00", "黃龍索道口", "準備上行"], ["10:00", "五彩池區", "核心景觀時段"], ["15:30", "離開黃龍", "往九寨溝口"], ["18:00", "九寨溝三墨酒店", "入住九寨溝口"]]}, {"date": "9/21", "title": "九寨溝→松潘", "highlight": "整天景區日", "rows": [["07:30", "九寨溝景區口", "排隊入園"], ["08:00", "景區觀光車", "開始全天遊覽"], ["12:30", "景區內", "午餐或簡單補給"], ["17:00", "離開九寨溝", "前往松潘"], ["19:00", "尚景酒店", "入住松潘古城"]]}, {"date": "9/22", "title": "松潘→成都", "highlight": "回到成都", "rows": [["08:30", "松潘出發", "返回成都"], ["12:30", "途中服務站", "午餐休息"], ["16:30", "豪閣遇上酒店", "入住成都飯店"], ["18:30", "奎星樓街／按摩", "看體力安排"], ["21:00", "回飯店", "調整休息"]]}, {"date": "9/23", "title": "樂山大佛→峨眉", "highlight": "美食重點日", "rows": [["07:30", "成都出發", "往樂山"], ["10:30", "樂山碼頭／遊船", "看大佛"], ["12:30", "樂山市區", "午餐吃蹺腳牛肉等"], ["15:30", "前往峨眉山", "移動至報國寺區域"], ["17:00", "柏隱湯泉智能酒店", "入住峨眉山報國寺區域"]]}, {"date": "9/24", "title": "峨眉山金頂→成都", "highlight": "金頂＋夜市", "rows": [["07:00", "前往高山區", "搭觀光車、索道"], ["09:30", "金頂", "主景點停留"], ["15:30", "下山返程", "回成都"], ["19:30", "撫琴夜市", "晚間逛吃"], ["21:30", "豪閣遇上酒店", "回飯店休息"]]}, {"date": "9/25", "title": "熊貓基地→青城山／三星堆→錦里", "highlight": "兩段重點行程", "rows": [["07:30", "熊貓基地", "最早時段入園"], ["11:30", "離開熊貓基地", "簡單午餐"], ["14:30", "青城山／三星堆", "下午二選一行程"], ["18:30", "錦里", "晚上散步吃小點"], ["21:00", "豪閣遇上酒店", "回成都住宿"]]}, {"date": "9/26", "title": "成都慢慢玩", "highlight": "慢節奏收尾", "rows": [["09:30", "人民公園", "喝茶放空"], ["12:30", "午餐", "補吃想吃的"], ["14:00", "寬窄巷子", "散步拍照"], ["19:00", "川劇變臉", "最後一晚表演"], ["21:30", "豪閣遇上酒店", "回飯店整理行李"]]}, {"date": "9/27", "title": "送機返程", "highlight": "依航班分兩次送機", "rows": [["08:30", "飯店早餐／整理", "退房前確認行李"], ["09:30", "第一趟送機", "依旅行社安排"], ["10:30", "第二趟送機", "依旅行社安排"], ["11:30", "機場報到", "預留報到時間"], ["返程", "離開成都", "結束旅程"]]}];
+const TIME_PLAN = [{"date": "9/18", "title": "抵達成都", "highlight": "城市暖身日", "rows": [["18:05前後", "成都機場", "抵達，與司機會合"], ["19:30", "西蜀天際", "辦理入住、放行李"], ["20:30", "春熙路", "晚餐與散步開始"], ["21:15", "太古里", "逛街、拍照"], ["22:30", "回飯店", "早點休息"]]}, {"date": "9/19", "title": "成都→都江堰→九寨溝", "highlight": "長拉車日・路況機動", "rows": [["08:00", "成都出發", "先前往都江堰"], ["10:00", "都江堰", "遊覽與簡單午餐"], ["12:30", "離開都江堰", "直接往九寨溝"], ["19:00前後", "天源豪生", "抵達九寨溝入住；時間依路況"], ["晚上", "九寨溝晚餐", "以抵達時間與體力安排"]]}, {"date": "9/20", "title": "九寨溝→川主寺", "highlight": "整天景區＋路況機動", "rows": [["07:30", "九寨溝景區口", "準備入園"], ["08:00", "景區觀光車", "開始全天遊覽"], ["12:30", "景區內", "午餐或簡單補給"], ["17:00", "離開九寨溝", "前往川主寺"], ["19:30前後", "旭日仙閣酒店", "目前安排；視道路狀況調整"]]}, {"date": "9/21", "title": "黃龍→松潘", "highlight": "高海拔景區日", "rows": [["07:30", "川主寺出發", "往黃龍景區"], ["09:00", "黃龍索道口", "準備上行"], ["10:00", "五彩池區", "核心景觀時段"], ["15:30", "離開黃龍", "前往松潘古城"], ["18:00前後", "尚景酒店", "入住松潘古城"]]}, {"date": "9/22", "title": "松潘→都江堰", "highlight": "長途返回・改住都江堰", "rows": [["08:30", "松潘出發", "往都江堰方向"], ["12:30", "途中", "午餐與休息"], ["16:30前後", "江上名都酒店", "抵達都江堰入住"], ["晚上", "都江堰", "晚餐、休息"], ["早休息", "飯店", "隔天還要往樂山與峨眉"]]}, {"date": "9/23", "title": "都江堰→樂山→峨眉", "highlight": "樂山美食重點日", "rows": [["07:30", "都江堰出發", "直接前往樂山"], ["10:30前後", "樂山碼頭／遊船", "看大佛；班次以當天為準"], ["12:30", "樂山市區", "午餐吃蹺腳牛肉等"], ["15:30", "前往峨眉山", "移動至報國寺區域"], ["17:00前後", "柏隱湯泉智能酒店", "入住峨眉山報國寺區域"]]}, {"date": "9/24", "title": "峨眉山金頂→成都", "highlight": "金頂＋夜市", "rows": [["07:00", "前往高山區", "搭觀光車、索道"], ["09:30", "金頂", "主景點停留"], ["15:30", "下山返程", "回成都"], ["19:30", "撫琴夜市", "晚間逛吃"], ["21:30", "豪閣遇上酒店", "回飯店休息"]]}, {"date": "9/25", "title": "熊貓基地→青城山／三星堆→錦里", "highlight": "兩段重點行程", "rows": [["07:30", "熊貓基地", "最早時段入園"], ["11:30", "離開熊貓基地", "簡單午餐"], ["14:30", "青城山／三星堆", "下午二選一行程"], ["18:30", "錦里", "晚上散步吃小點"], ["21:00", "豪閣遇上酒店", "回成都住宿"]]}, {"date": "9/26", "title": "成都慢慢玩", "highlight": "慢節奏收尾", "rows": [["09:30", "人民公園", "喝茶放空"], ["12:30", "午餐", "補吃想吃的"], ["14:00", "寬窄巷子", "散步拍照"], ["19:00", "川劇變臉", "最後一晚表演"], ["21:30", "豪閣遇上酒店", "回飯店整理行李"]]}, {"date": "9/27", "title": "送機返程", "highlight": "依航班分兩次送機", "rows": [["08:30", "飯店早餐／整理", "退房前確認行李"], ["09:30", "第一趟送機", "依旅行社安排"], ["10:30", "第二趟送機", "依旅行社安排"], ["11:30", "機場報到", "預留報到時間"], ["返程", "離開成都", "結束旅程"]]}];
 const FOOD_MEDIA = {
   hotpot: { imageUrl: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Chengdu%20hot%20pot.jpg?width=1200", author: "유신예", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", sourcePage: "https://commons.wikimedia.org/wiki/File:Chengdu_hot_pot.jpg" },
   skewers: { imageUrl: "https://commons.wikimedia.org/wiki/Special:Redirect/file/%E5%86%B7%E9%94%85%20%E4%B8%B2%20Cold-pot%20Skewers%20Y1%20per%20skewer%20%281495465364%29.jpg?width=1200", author: "Alpha", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0/", sourcePage: "https://commons.wikimedia.org/wiki/File:%E5%86%B7%E9%94%85_%E4%B8%B2_Cold-pot_Skewers_Y1_per_skewer_(1495465364).jpg" },
@@ -920,7 +918,7 @@ function routeMapSvg() {
     <a class="route-image-link" href="./assets/maps/route-map-clear.png" target="_blank" rel="noopener">
       <img class="route-image" src="./assets/maps/route-map-clear.png" alt="成都旅途景點相對位置示意圖">
     </a>
-    <figcaption class="route-image-caption">點圖片可另開大圖查看。成都位於行程中心，川西段在西北方向，樂山與峨眉山在南方，青城山與三星堆位於成都周邊。</figcaption>
+    <figcaption class="route-image-caption">點圖片可另開大圖查看。此圖只用來看各地相對位置；最新行程先後請以下方時間表與最新動線為準。</figcaption>
   </figure>`;
 }
 
